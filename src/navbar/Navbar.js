@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link as LinkS } from "react-scroll";
 import {
   styled,
   AppBar,
   Toolbar,
   Box,
+  IconButton,
   Drawer,
   List,
   ListItem,
@@ -20,7 +21,30 @@ const StyledAppBar = styled(AppBar)({
   borderBottom: "3px solid #00ADB5",
 });
 
+const StyledListItem = styled(ListItem)(({ theme }) => ({
+  display: "flex",
+  textAlign: "center",
+  justifyContent: "center",
+  padding: theme.spacing(1, 0),
+  "&:hover": {
+    backgroundColor: "#61C0BF",
+  },
+}));
+
 const Navbar = () => {
+  const [mobileNavIsOpen, setMobileNavIsOpen] = useState(false);
+  const handleOpenNavMenu = () => {
+    setMobileNavIsOpen(!mobileNavIsOpen);
+  };
+
+  const listItemProps = {
+    component: LinkS,
+    spy: true,
+    smooth: true,
+    offset: 0,
+    duration: 500,
+  };
+
   return (
     <div>
       <StyledAppBar position="sticky">
@@ -37,17 +61,45 @@ const Navbar = () => {
             <img
               src={logo}
               alt="Joyce Tang"
-              style={{ width: "55px", height: "55px" }}
+              style={{ width: "70px", height: "70px" }}
             />
           </LinkS>
+
           {/* mobile */}
           <Box
             sx={{
               flexGrow: 1,
-              display: { xs: "flex", md: "none", justifyContent: "center" },
+              display: {
+                xs: "flex",
+                md: "none",
+                flexDirection: "row-reverse",
+              },
             }}
-          ></Box>
-          {/* not mobile */}
+          >
+            <IconButton onClick={handleOpenNavMenu}>
+              <MenuIcon sx={{ fontSize: 35, color: "#00ADB5 " }} />
+            </IconButton>
+
+            <Drawer
+              open={mobileNavIsOpen}
+              onClose={() => setMobileNavIsOpen(false)}
+              anchor="top"
+            >
+              <List>
+                {navItems.map((item) => (
+                  <ListItem
+                    key={item}
+                    {...listItemProps}
+                    to={item.toLowerCase()}
+                  >
+                    <StyledListItem>{item} </StyledListItem>
+                  </ListItem>
+                ))}
+              </List>
+            </Drawer>
+          </Box>
+
+          {/* web */}
           <Box
             sx={{
               flexGrow: 1,
