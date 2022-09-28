@@ -1,40 +1,76 @@
 import React from "react";
 import { Link as LinkS } from "react-scroll";
 import {
+  styled,
   AppBar,
   Toolbar,
-  Button,
-  useTheme,
-  useMediaQuery,
-  IconButton,
-  Typography,
-  styled,
+  Box,
+  Drawer,
+  List,
+  ListItem,
+  ListItemText,
+  MenuItem,
 } from "@mui/material";
+import MenuIcon from "@mui/icons-material/Menu";
 
+import logo from "../images/jt.svg";
 const navItems = ["Skills", "Projects", "Contact"];
+
+const StyledAppBar = styled(AppBar)({
+  borderBottom: "3px solid #00ADB5",
+});
 
 const Navbar = () => {
   return (
     <div>
-      <AppBar position="sticky">
+      <StyledAppBar position="sticky">
         <Toolbar>
           {/* fix: logo to home */}
-
-          {navItems.map((item) => (
-            <Button key={item}>
-              <LinkS
-                to={item.toLowerCase()}
-                spy={true}
-                smooth={true}
-                offset={-70}
-                duration={500}
-              >
-                {item}
-              </LinkS>
-            </Button>
-          ))}
+          <LinkS
+            activeClass="active"
+            to="home"
+            spy={true}
+            smooth={true}
+            offset={-70}
+            duration={500}
+          >
+            <img
+              src={logo}
+              alt="Joyce Tang"
+              style={{ width: "55px", height: "55px" }}
+            />
+          </LinkS>
+          {/* mobile */}
+          <Box
+            sx={{
+              flexGrow: 1,
+              display: { xs: "flex", md: "none", justifyContent: "center" },
+            }}
+          ></Box>
+          {/* not mobile */}
+          <Box
+            sx={{
+              flexGrow: 1,
+              display: { xs: "none", md: "flex", justifyContent: "center" },
+            }}
+          >
+            {navItems.map((item) => (
+              <MenuItem key={item}>
+                <LinkS
+                  activeClass="active"
+                  to={item.toLowerCase()}
+                  spy={true}
+                  smooth={true}
+                  offset={-70}
+                  duration={500}
+                >
+                  {item}
+                </LinkS>
+              </MenuItem>
+            ))}
+          </Box>
         </Toolbar>
-      </AppBar>
+      </StyledAppBar>
     </div>
   );
 };
