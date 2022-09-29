@@ -1,27 +1,36 @@
 import React from "react";
 import {
   Container,
-  Box,
   Card,
   CardMedia,
   CardContent,
   Grid,
   Typography,
+  styled,
 } from "@mui/material";
+
+const Box = styled("div")(({ theme }) => ({
+  padding: theme.spacing(6),
+  display: "flex",
+  justifyContent: "center",
+  textAlign: "center",
+}));
 
 const Skill = () => {
   return (
     <div id="skill">
       <Container>
-        <Box>
+        <Box component="div">
           <Typography variant="h6" sx={{ textAlign: "center" }}>
-            Front-End
+            I am good with these technologies
           </Typography>
-          <Grid container justifyContent="center" alignItems="center">
+        </Box>
+        <Box component="div">
+          <Grid container>
             {front.map((item) => (
-              <Grid item xs={6} sm={3} md={3} key={item.title}>
+              <Grid item xs={6} sm={3} md={2} key={item.title}>
                 <Card
-                  elevation={1}
+                  elevation={0}
                   sx={{
                     alignItem: "center",
                     textAlign: "center",
@@ -38,67 +47,12 @@ const Skill = () => {
                     image={item.src}
                     alt={item.title}
                     sx={{
-                      width: { xs: "45px", md: "75px", xl: "100px" },
+                      width: { xs: "35px", md: "60px", xl: "80px" },
                       margin: "auto",
                     }}
                   />
                   <CardContent>
                     <Typography variant="body1" component="div" gutterBottom>
-                      {item.title}
-                    </Typography>
-                  </CardContent>
-                </Card>
-              </Grid>
-            ))}
-          </Grid>
-
-          {/* backend */}
-          <Typography variant="h6">Back-End</Typography>
-          <Grid
-            container
-            rowSpacing={1}
-            columnSpacing={{ xs: 1, sm: 2, md: 3 }}
-            direction="row"
-            justifyContent="flex-end"
-            alignItems="center"
-          >
-            {back.map((item) => (
-              <Grid item xs={6} sm={4} md={4} lg={2} key={item.title}>
-                <Card elevation={2} sx={{ textAlign: "center" }}>
-                  <img
-                    src={item.src}
-                    alt={item.title}
-                    style={{ width: "35px", height: "35px" }}
-                  />
-                  <CardContent>
-                    <Typography variant="h6" component="div" gutterBottom>
-                      {item.title}
-                    </Typography>
-                  </CardContent>
-                </Card>
-              </Grid>
-            ))}
-          </Grid>
-          {/* others */}
-          <Typography variant="h6">Other</Typography>
-          <Grid
-            container
-            rowSpacing={1}
-            columnSpacing={{ xs: 1, sm: 2, md: 3 }}
-            direction="row"
-            justifyContent="flex-end"
-            alignItems="center"
-          >
-            {others.map((item) => (
-              <Grid item xs={6} sm={4} md={4} lg={2} key={item.title}>
-                <Card elevation={2} sx={{ textAlign: "center" }}>
-                  <img
-                    src={item.src}
-                    alt={item.title}
-                    style={{ width: "35px", height: "35px" }}
-                  />
-                  <CardContent>
-                    <Typography variant="h6" component="div" gutterBottom>
                       {item.title}
                     </Typography>
                   </CardContent>
@@ -130,8 +84,6 @@ const front = [
     title: "Bootstrap",
     src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-plain-wordmark.svg",
   },
-];
-const back = [
   {
     title: "Node JS",
     src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original-wordmark.svg",
@@ -144,8 +96,6 @@ const back = [
     title: "MongoDB",
     src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original-wordmark.svg",
   },
-];
-const others = [
   {
     title: "GitHub",
     src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original-wordmark.svg",

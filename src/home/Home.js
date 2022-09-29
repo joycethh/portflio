@@ -2,7 +2,7 @@ import React from "react";
 import {
   Container,
   Grid,
-  Button,
+  CardMedia,
   Typography,
   styled,
   Card,
@@ -37,19 +37,41 @@ const Home = () => {
         </Box>
         {/* features   */}
         <Box component="div">
-          <Grid container spacing={0}>
+          <Typography variant="h6" sx={{ textAlign: "center" }}>
+            I am aming for these goals
+          </Typography>
+        </Box>
+        <Box component="div">
+          <Grid container>
             {lists.map((item) => (
               <Grid item xs={12} sm={6} md={3} xl={3} key={item.title}>
                 <Card
                   elevation={0}
                   sx={{
+                    alignItem: "center",
                     textAlign: "center",
                     paddingTop: "20px",
-                    width: "310px",
+                    width: {
+                      sx: 70,
+                      sm: 100,
+                      md: 150,
+                    },
                   }}
                 >
+                  <CardMedia>
+                    {
+                      <item.icon
+                        alt={item.title}
+                        sx={{
+                          fontSize: { xs: "25px", md: "45px", xl: "65px" },
+                          margin: "auto",
+                        }}
+                      />
+                    }
+                  </CardMedia>
+
                   {/* icon section */}
-                  <Fab
+                  {/* <Fab
                     sx={{
                       backgroundColor: "#00ADB5",
                       width: "80px",
@@ -57,7 +79,7 @@ const Home = () => {
                     }}
                   >
                     {<item.icon style={{ fontSize: "40px" }} />}
-                  </Fab>
+                  </Fab> */}
 
                   {/* content section */}
                   <CardContent>
@@ -99,7 +121,7 @@ const lists = [
   {
     icon: LockOutlined,
     title: "Secure",
-    body: "Always put the data security in mind",
+    body: "Always put the data sercurity in mind",
   },
 ];
 export default Home;
