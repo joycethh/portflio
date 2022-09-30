@@ -13,3 +13,50 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+
+.container {
+  position: relative;
+  width: 50%;
+}
+
+.img{
+display: block;
+max-width:100%;
+
+opacity: 1;
+transition: .5s ease;
+backface-visibility: hidden;
+}
+
+.container:hover .image {
+  opacity: 0.1;
+}
+
+.overlay{
+  color: #fff;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  background-color: rgba(52, 58, 68, 0.6);
+  transition: 0.5s ease-in-out;
+
+
+}
+.container:hover .overlay {
+  opacity: 1;
+}
+
+.text {
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+} 
