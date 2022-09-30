@@ -20,7 +20,7 @@ const Box = styled("div")(({ theme }) => ({
 
 const Skill = () => {
   return (
-    <div id="skill">
+    <div id="skills">
       <SectionContainer title="Skills">
         <Box component="div">
           <Typography variant="h6" sx={{ textAlign: "center" }}>

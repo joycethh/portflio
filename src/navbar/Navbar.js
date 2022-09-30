@@ -30,6 +30,15 @@ const StyledListItem = styled(ListItem)(({ theme }) => ({
   },
 }));
 
+const StyledLink = styled("a")(({ theme }) => ({
+  color: "#fff",
+  textAlign: "center",
+  justifyContent: "center",
+  padding: theme.spacing(1, 0),
+  "&:active": {
+    borderBottom: "solid 2px #FF2E63",
+  },
+}));
 const Navbar = () => {
   const [mobileNavIsOpen, setMobileNavIsOpen] = useState(false);
   const handleOpenNavMenu = () => {
@@ -82,6 +91,7 @@ const Navbar = () => {
             <Drawer
               open={mobileNavIsOpen}
               onClose={() => setMobileNavIsOpen(false)}
+              onClick={() => setMobileNavIsOpen(false)}
               anchor="top"
             >
               <List>
@@ -90,6 +100,7 @@ const Navbar = () => {
                     key={item}
                     {...listItemProps}
                     to={item.toLowerCase()}
+                    onClick={() => setMobileNavIsOpen(false)}
                   >
                     <StyledListItem>{item} </StyledListItem>
                   </ListItem>
@@ -107,7 +118,7 @@ const Navbar = () => {
           >
             {navItems.map((item) => (
               <MenuItem key={item}>
-                <LinkS
+                <StyledLink
                   activeClass="active"
                   to={item.toLowerCase()}
                   spy={true}
@@ -116,7 +127,7 @@ const Navbar = () => {
                   duration={500}
                 >
                   {item}
-                </LinkS>
+                </StyledLink>
               </MenuItem>
             ))}
           </Box>
