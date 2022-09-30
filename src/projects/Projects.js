@@ -3,6 +3,7 @@ import { Box, Tabs, Tab, Card } from "@mui/material";
 
 import SectionContainer from "../SectionContainer";
 import TabPanel from "./TabPanel";
+import MyCard from "./Card";
 
 const Projects = () => {
   const [value, setValue] = React.useState(0);
@@ -27,7 +28,7 @@ const Projects = () => {
           </Tabs>
         </Box>
         <TabPanel value={value} index={0}>
-          <Card>projects</Card>
+          <MyCard />
         </TabPanel>
       </SectionContainer>
     </div>
