@@ -9,6 +9,8 @@ import {
   styled,
 } from "@mui/material";
 
+import SectionContainer from "../SectionContainer";
+
 const Box = styled("div")(({ theme }) => ({
   padding: theme.spacing(6),
   display: "flex",
@@ -19,10 +21,10 @@ const Box = styled("div")(({ theme }) => ({
 const Skill = () => {
   return (
     <div id="skill">
-      <Container>
+      <SectionContainer title="Skills">
         <Box component="div">
           <Typography variant="h6" sx={{ textAlign: "center" }}>
-            I am good with these technologies
+            My Top Skills
           </Typography>
         </Box>
         <Box component="div">
@@ -61,7 +63,7 @@ const Skill = () => {
             ))}
           </Grid>
         </Box>
-      </Container>
+      </SectionContainer>
     </div>
   );
 };
