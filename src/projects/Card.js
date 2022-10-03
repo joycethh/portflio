@@ -43,11 +43,6 @@ const TextBox = styled("div")(({ theme }) => ({
   top: "50%",
   left: "50%",
   transform: "translate(-50%, -50%)",
-  [theme.breakpoints.up("md")]: {
-    top: "50%",
-    left: "50%",
-    transform: "translate(-50%, -50%)",
-  },
 }));
 
 const MyCard = ({ image, alt, label, description, siteLink, codeLink }) => {
