@@ -38,12 +38,17 @@ const StyledImg = styled(CardMedia)({
   },
 });
 
-const TextBox = styled("div")({
+const TextBox = styled("div")(({ theme }) => ({
   position: "absolute",
   top: "50%",
   left: "50%",
   transform: "translate(-50%, -50%)",
-});
+  [theme.breakpoints.up("md")]: {
+    top: "50%",
+    left: "50%",
+    transform: "translate(-50%, -50%)",
+  },
+}));
 
 const MyCard = ({ image, alt, label, description, siteLink, codeLink }) => {
   return (
@@ -51,11 +56,15 @@ const MyCard = ({ image, alt, label, description, siteLink, codeLink }) => {
       <Card sx={{ position: "relative" }}>
         <StyledImg component="img" image={image} alt={alt} />
         <CardContent>
-          <Chip label={label} />
+          <Stack direction="row" spacing={0.8} mt={0.3}>
+            {label.map((value) => (
+              <Chip label={value} color="primary" key={value} />
+            ))}
+          </Stack>
         </CardContent>
         <OverlayBox component="div">
           <TextBox>
-            <Typography variant="h6" pb={2}>
+            <Typography variant="body1" pb={2}>
               {description}
             </Typography>
             <Stack direction="row" spacing={2}>
