@@ -7,7 +7,6 @@ import {
   styled,
   Card,
   CardContent,
-  Fab,
 } from "@mui/material";
 import {
   DevicesOutlined,
