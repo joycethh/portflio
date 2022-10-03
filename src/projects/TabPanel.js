@@ -4,7 +4,7 @@ import { Box } from "@mui/material";
 const TabPanel = ({ value, index, children }) => {
   return (
     <div id={`${index}`} hidden={value !== index}>
-      {value === index && <Box sx={{ p: 3 }}>{children}</Box>}
+      {value === index && <Box sx={{ pt: 6 }}>{children}</Box>}
     </div>
   );
 };
