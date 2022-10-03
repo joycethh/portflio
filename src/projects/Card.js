@@ -9,11 +9,9 @@ import {
   Chip,
   styled,
 } from "@mui/material";
-import memory from "../images/memory.png";
-import workout from "../images/workout.png";
 
 const OverlayBox = styled("div")(({ theme }) => ({
-  color: "#ffffff",
+  color: theme.palette.common.white,
   position: "absolute",
   top: 0,
   bottom: 0,
@@ -47,28 +45,36 @@ const TextBox = styled("div")({
   transform: "translate(-50%, -50%)",
 });
 
-const MyCard = () => {
+const MyCard = ({ image, alt, label, description, siteLink, codeLink }) => {
   return (
     <>
-      <Card sx={{ position: "relative", width: "50%" }}>
-        <StyledImg component="img" image={workout} alt="workout" />
+      <Card sx={{ position: "relative" }}>
+        <StyledImg component="img" image={image} alt={alt} />
         <CardContent>
-          <Chip label="React" />
-          <Chip label="MongoDB" />
-          <Chip label="Express" />
-          <Chip label="Node JS" />
+          <Chip label={label} />
         </CardContent>
         <OverlayBox component="div">
           <TextBox>
             <Typography variant="h6" pb={2}>
-              Social media web app using CRUD mechanism that allows users to
-              create, update and delete posts.
+              {description}
             </Typography>
             <Stack direction="row" spacing={2}>
-              <Button variant="outlined" size="small" color="secondary">
+              <Button
+                variant="outlined"
+                size="small"
+                color="secondary"
+                href={siteLink}
+                target="_blank"
+              >
                 Visit Website
               </Button>
-              <Button variant="outlined" size="small" color="secondary">
+              <Button
+                variant="outlined"
+                size="small"
+                color="secondary"
+                href={codeLink}
+                target="_blank"
+              >
                 View Codes
               </Button>
             </Stack>
