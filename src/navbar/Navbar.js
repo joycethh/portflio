@@ -16,10 +16,6 @@ import MenuIcon from "@mui/icons-material/Menu";
 import logo from "../images/jt.svg";
 const navItems = ["Skills", "Projects", "Contact"];
 
-const StyledAppBar = styled(AppBar)({
-  borderBottom: "3px solid #00ADB5",
-});
-
 const StyledListItem = styled(ListItem)(({ theme }) => ({
   display: "flex",
   textAlign: "center",
@@ -55,7 +51,10 @@ const Navbar = () => {
 
   return (
     <div>
-      <StyledAppBar position="sticky">
+      <AppBar
+        position="sticky"
+        sx={{ borderBottom: 3, borderColor: "#00ADB5" }}
+      >
         <Toolbar>
           {/* fix: logo to home */}
           <LinkS
@@ -132,7 +131,7 @@ const Navbar = () => {
             ))}
           </Box>
         </Toolbar>
-      </StyledAppBar>
+      </AppBar>
     </div>
   );
 };
