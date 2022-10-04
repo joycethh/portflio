@@ -51,7 +51,7 @@ const MyCard = ({ image, alt, label, description, siteLink, codeLink }) => {
       <Card sx={{ position: "relative" }}>
         <StyledImg component="img" image={image} alt={alt} />
         <CardContent>
-          <Stack direction="row" spacing={0.8} mt={0.3}>
+          <Stack direction="row" spacing={0.8}>
             {label.map((value) => (
               <Chip label={value} color="primary" key={value} />
             ))}
