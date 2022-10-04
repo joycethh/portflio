@@ -53,7 +53,7 @@ const MyCard = ({ image, alt, label, description, siteLink, codeLink }) => {
         <CardContent>
           <Stack direction="row" spacing={0.8}>
             {label.map((value) => (
-              <Chip label={value} color="primary" key={value} />
+              <Chip label={value} key={value} />
             ))}
           </Stack>
         </CardContent>
