@@ -10,14 +10,7 @@ import simongame from "../images/simongame.png";
 const projectData = [
   {
     title: "Memo",
-    label: [
-      "React",
-      "Redux",
-      "Mongoose ",
-      "Express",
-      "NodeJs ",
-      "Google Oauth",
-    ],
+    label: ["React", "Redux", "Mongoose ", "Express", "NodeJS", "Google Oauth"],
     description:
       "A social media web app using CRUD princinples that allows users to create, update and delete posts. ",
     image: memory,
@@ -26,7 +19,7 @@ const projectData = [
   },
   {
     title: "Blog",
-    label: ["Json Server ", "React "],
+    label: ["Json Server", "React"],
     description:
       "This blog web app uses react for the front and fake REST API with json server.",
     image: blog,
@@ -35,7 +28,7 @@ const projectData = [
   },
   {
     title: "Workout",
-    label: ["Authentication", "Mern"],
+    label: ["Authentication", "Mern", "NodeJS"],
     description:
       "It is a MERN app using MongoDB cluster, Express, React, Node JS technologies. And a local authentication added.",
     image: workout,
@@ -53,7 +46,7 @@ const projectData = [
   },
   {
     title: "Frontend",
-    label: ["React", "JavaScript", "MUI5"],
+    label: ["React", "MUI5"],
     description: "a static react website uses Material UI css library. ",
     image: mui,
     siteLink: "https://mui-client-side-project.netlify.app/",
@@ -61,19 +54,19 @@ const projectData = [
   },
   {
     title: "Simon Game",
-    label: ["HTML ", "CSS", "JavaScript"],
+    label: ["HTML", "CSS", "JavaScript"],
     description: "Simon game built with javascript, html and css",
     image: simongame,
     siteLink: "https://joycethh.github.io/project-simon-game/",
     codeLink: "https://github.com/joycethh/project-simon-game",
   },
-  //   {
-  //     title: "Drum Kit",
-  //     label: ["HTML ", "CSS ", "JavaScript"],
-  //     image: drum,
-  //     siteLink: "https://joycethh.github.io/project-drumKit/",
-  //     codeLink: "https://github.com/joycethh/project-drumKit.git",
-  //   },
+  // {
+  //   title: "Drum Kit",
+  //   label: ["HTML ", "CSS ", "JavaScript"],
+  //   image: drum,
+  //   siteLink: "https://joycethh.github.io/project-drumKit/",
+  //   codeLink: "https://github.com/joycethh/project-drumKit.git",
+  // },
   //   {
   //     title: "Tin Dog",
   //     label: ["HTML ", "CSS", "Bootstrap"],

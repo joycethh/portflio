@@ -20,7 +20,7 @@ const OverlayBox = styled("div")(({ theme }) => ({
   height: "100%",
   width: "100%",
   opacity: 0,
-  backgroundColor: " rgba(37,42,52,1)",
+  backgroundColor: "rgba(37,42,52,1)",
   transition: "0.5s ease-in-out",
   "&:hover": {
     opacity: 1,
