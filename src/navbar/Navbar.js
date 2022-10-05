@@ -9,7 +9,6 @@ import {
   Drawer,
   List,
   ListItem,
-  MenuItem,
   Stack,
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
@@ -116,13 +115,21 @@ const Navbar = () => {
               display: { xs: "none", md: "flex", justifyContent: "center" },
             }}
           >
-            <Stack direction="row" spacing={2}>
+            <List component={Stack} spacing={4} direction="row">
               {navItems.map((item) => (
-                <ListItem key={item} {...listItemProps} to={item.toLowerCase()}>
-                  <StyledLink>{item} </StyledLink>
+                <ListItem key={item}>
+                  <StyledLink
+                    to={item.toLowerCase()}
+                    spy={true}
+                    smooth={true}
+                    offset={-70}
+                    duration={500}
+                  >
+                    {item}
+                  </StyledLink>
                 </ListItem>
               ))}
-            </Stack>
+            </List>
           </Box>
         </Toolbar>
       </AppBar>
