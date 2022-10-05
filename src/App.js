@@ -1,24 +1,31 @@
-import { ThemeProvider } from "@mui/material";
-
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { ThemeProvider, CssBaseline, Toolbar, Button } from "@mui/material";
+import KeyboardDoubleArrowUpIcon from "@mui/icons-material/KeyboardDoubleArrowUp";
 import lightTheme from "./theme";
-import Home from "./home/Home";
+import ScrollTop from "./ScrollTop";
+
 import Navbar from "./navbar/Navbar";
-import Skill from "./skills/Skill";
-import Projects from "./projects/Projects";
-import Contact from "./contact/Contact";
 import Footer from "./Footer";
+import MainPage from "./MainPage";
+
 function App() {
   return (
-    <div className="App">
-      <ThemeProvider theme={lightTheme}>
+    <ThemeProvider theme={lightTheme}>
+      <CssBaseline />
+      <BrowserRouter>
         <Navbar />
-        <Home />
-        <Skill />
-        <Projects />
-        <Contact />
+        <Toolbar id="back-to-top-anchor" />
+        <Routes>
+          <Route exact path="/" element={<MainPage />} />
+        </Routes>
         <Footer />
-      </ThemeProvider>
-    </div>
+        <ScrollTop>
+          <Button size="medium" variant="contained">
+            <KeyboardDoubleArrowUpIcon />
+          </Button>
+        </ScrollTop>
+      </BrowserRouter>
+    </ThemeProvider>
   );
 }
 
