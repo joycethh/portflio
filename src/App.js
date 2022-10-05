@@ -6,6 +6,7 @@ import Navbar from "./navbar/Navbar";
 import Skill from "./skills/Skill";
 import Projects from "./projects/Projects";
 import Contact from "./contact/Contact";
+import Footer from "./Footer";
 function App() {
   return (
     <div className="App">
@@ -15,6 +16,7 @@ function App() {
         <Skill />
         <Projects />
         <Contact />
+        <Footer />
       </ThemeProvider>
     </div>
   );

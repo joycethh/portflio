@@ -11,7 +11,7 @@ const Footer = () => {
           backgroundColor: "#434e5e",
         }}
       >
-        <Typography variant="body2" p={2}>
+        <Typography variant="body2" p={1.6}>
           Joyce Tang Ⓒ {new Date().getFullYear()}
         </Typography>
       </Box>
