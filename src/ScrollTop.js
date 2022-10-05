@@ -1,7 +1,7 @@
 import React from "react";
-import { Fade, Box, useScrollTrigger } from "@mui/material";
-
-const ScrollTop = ({ children }) => {
+import { Fade, Box, useScrollTrigger, Button } from "@mui/material";
+import KeyboardDoubleArrowUpIcon from "@mui/icons-material/KeyboardDoubleArrowUp";
+const ScrollTop = () => {
   const trigger = useScrollTrigger({ disableHysteresis: true, threshold: 100 });
 
   const handleClick = (event) => {
@@ -22,7 +22,9 @@ const ScrollTop = ({ children }) => {
           onClick={handleClick}
           sx={{ position: "fixed", bottom: 16, right: 16 }}
         >
-          {children}
+          <Button size="medium" variant="contained">
+            <KeyboardDoubleArrowUpIcon />
+          </Button>
         </Box>
       </Fade>
     </>

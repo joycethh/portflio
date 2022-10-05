@@ -1,6 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { ThemeProvider, CssBaseline, Toolbar, Button } from "@mui/material";
-import KeyboardDoubleArrowUpIcon from "@mui/icons-material/KeyboardDoubleArrowUp";
+import { ThemeProvider, CssBaseline, Toolbar } from "@mui/material";
 import lightTheme from "./theme";
 import ScrollTop from "./ScrollTop";
 
@@ -19,11 +18,7 @@ function App() {
           <Route exact path="/" element={<MainPage />} />
         </Routes>
         <Footer />
-        <ScrollTop>
-          <Button size="medium" variant="contained">
-            <KeyboardDoubleArrowUpIcon />
-          </Button>
-        </ScrollTop>
+        <ScrollTop />
       </BrowserRouter>
     </ThemeProvider>
   );
