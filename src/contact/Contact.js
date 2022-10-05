@@ -9,6 +9,10 @@ import {
   CardContent,
   Stack,
   IconButton,
+  Dialog,
+  DialogTitle,
+  DialogContent,
+  DialogContentText,
 } from "@mui/material";
 
 import { Send, GitHub, LinkedIn, Email } from "@mui/icons-material/";
@@ -18,6 +22,7 @@ import Input from "./Input";
 const Contact = () => {
   const [error, setError] = useState(null);
   const [sucess, setSucess] = useState(null);
+  const [open, setOpen] = useState(false);
 
   const refForm = useRef();
 
@@ -33,13 +38,12 @@ const Contact = () => {
       )
       .then(
         (response) => {
-          console.log("sucess", response.status, response.text);
           setSucess(JSON.stringify(response.text));
+          setOpen(true);
         },
         (error) => {
-          console.log("error", error);
-          console.log(JSON.stringify(error));
           setError(JSON.stringify(error.text));
+          setOpen(true);
         }
       );
   };
@@ -53,7 +57,7 @@ const Contact = () => {
             margin: "auto",
           }}
         >
-          <Card pb={5}>
+          <Card>
             <CardContent>
               <Typography variant="body1" gutterBottom>
                 I am open with new opporturnities. If you are interested in
@@ -83,7 +87,7 @@ const Contact = () => {
           </Card>
 
           <form ref={refForm} onSubmit={sendEmail}>
-            <Box>
+            <Box pt={5}>
               <Grid container spacing={3}>
                 <Input name="name" label="Name" half />
                 <Input name="email" label="Email" type="email" half />
@@ -107,6 +111,27 @@ const Contact = () => {
               </Grid>
             </Box>
           </form>
+          {sucess && (
+            <Dialog open={open} onClose={() => setOpen(false)}>
+              <DialogTitle> Your message is sent!</DialogTitle>
+              <DialogContent>
+                <DialogContentText>
+                  Thanks! I'll be in touch really soon.
+                </DialogContentText>
+              </DialogContent>
+            </Dialog>
+          )}
+
+          {error && (
+            <Dialog open={open} onClose={() => setOpen(false)}>
+              <DialogTitle> Opps! Something went wrong!</DialogTitle>
+              <DialogContent>
+                <DialogContentText>
+                  Please try again later or contact me directly via email.
+                </DialogContentText>
+              </DialogContent>
+            </Dialog>
+          )}
         </Box>
       </SectionContainer>
     </div>
