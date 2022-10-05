@@ -1,7 +1,8 @@
 import emailjs from "@emailjs/browser";
-import { Box, Grid, Button, Typography } from "@mui/material";
 import { useRef, useState } from "react";
+import { Box, Grid, Button, Typography } from "@mui/material";
 
+import SendIcon from "@mui/icons-material/Send";
 import SectionContainer from "../SectionContainer";
 import Input from "./Input";
 
@@ -50,13 +51,23 @@ const Contact = () => {
 
           <form ref={refForm} onSubmit={sendEmail}>
             <Box>
-              <Grid container spacing={2}>
+              <Grid container spacing={3}>
                 <Input name="name" label="Name" half />
                 <Input name="email" label="Email" type="email" half />
-                <Input name="message" label="Message" row="4" />
+                <Input name="message" label="Message" multiline rows={7} />
 
-                <Grid item xs={12}>
-                  <Button variant="contained" color="secondary" type="submit">
+                <Grid
+                  item
+                  xs={12}
+                  sx={{ display: "flex", justifyContent: "center" }}
+                >
+                  <Button
+                    variant="contained"
+                    color="secondary"
+                    type="submit"
+                    endIcon={<SendIcon />}
+                    sx={{ width: "100%" }}
+                  >
                     SEND
                   </Button>
                 </Grid>
