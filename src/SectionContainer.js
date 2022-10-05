@@ -16,7 +16,7 @@ const SectionContainer = ({ title, children }) => {
       <Container>
         <div>
           <Box pb={4.5} pt={10}>
-            <Divider color="primary">
+            <Divider>
               <StyledChip label={title} size="large" color="primary" />
             </Divider>
           </Box>
