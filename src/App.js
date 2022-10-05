@@ -5,7 +5,7 @@ import Home from "./home/Home";
 import Navbar from "./navbar/Navbar";
 import Skill from "./skills/Skill";
 import Projects from "./projects/Projects";
-
+import Contact from "./contact/Contact";
 function App() {
   return (
     <div className="App">
@@ -14,6 +14,7 @@ function App() {
         <Home />
         <Skill />
         <Projects />
+        <Contact />
       </ThemeProvider>
     </div>
   );
