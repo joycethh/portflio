@@ -1,10 +1,9 @@
 import emailjs from "@emailjs/browser";
-import { Box, TextField, Button, Typography, IconButton } from "@mui/material";
-import GitHubIcon from "@mui/icons-material/GitHub";
-import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import { Box, Grid, Button, Typography } from "@mui/material";
 import { useRef, useState } from "react";
 
 import SectionContainer from "../SectionContainer";
+import Input from "./Input";
 
 const Contact = () => {
   const [error, setError] = useState(null);
@@ -38,70 +37,30 @@ const Contact = () => {
   return (
     <div id="contact">
       <SectionContainer title="Contact">
-        <Box>
+        <Box
+          sx={{
+            width: "70%",
+            margin: "auto",
+          }}
+        >
           <Typography variant="body1">
             I am open with new opportunities. Use the form below to get in touch
             if you are interested in hiring me for your projects.
           </Typography>
-          <Typography variant="h6">
-            You can also fine me on the following channels
-          </Typography>
-
-          <IconButton href="https://github.com/joycethh" target="_blank">
-            <GitHubIcon />
-          </IconButton>
-
-          <IconButton
-            href="https://www.linkedin.com/in/joycethh/"
-            target="_blank"
-          >
-            <LinkedInIcon />
-          </IconButton>
 
           <form ref={refForm} onSubmit={sendEmail}>
-            <Box
-              overflow="hidden"
-              style={{ position: "relative", minHeight: "300px" }}
-            >
-              <TextField
-                variant="filled"
-                margin="normal"
-                type="text"
-                name="name"
-                placeholder="Name"
-              />
-              <TextField
-                variant="filled"
-                type="email"
-                margin="normal"
-                name="email"
-                placeholder="Email"
-                required
-              />
+            <Box>
+              <Grid container spacing={2}>
+                <Input name="name" label="Name" half />
+                <Input name="email" label="Email" type="email" half />
+                <Input name="message" label="Message" row="4" />
 
-              <TextField
-                variant="filled"
-                margin="normal"
-                multiline
-                rows={4}
-                fullWidth
-                type="text"
-                name="message"
-                placeholder="Message"
-                required
-              />
-
-              <Box display="flex" justifyContent="center" mt={2}>
-                <Button
-                  fullWidth
-                  variant="contained"
-                  color="secondary"
-                  type="submit"
-                  sx={{ width: "200px" }}
-                >
-                  SEND
-                </Button>
-              </Box>
+                <Grid item xs={12}>
+                  <Button variant="contained" color="secondary" type="submit">
+                    SEND
+                  </Button>
+                </Grid>
+              </Grid>
             </Box>
           </form>
         </Box>
