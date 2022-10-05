@@ -10,7 +10,8 @@ const Input = ({ half, name, label, type, rows }) => {
         variant="outlined"
         fullWidth
         required
-        row={rows}
+        multiline
+        rows={rows}
       />
     </Grid>
   );
