@@ -1,15 +1,14 @@
 import { styled, Box, Button } from "@mui/material";
 
 export const AvatarBox = styled(Box)(({ theme }) => ({
-  padding: theme.spacing(1),
+  padding: theme.spacing(2),
   display: "flex",
   justifyContent: "center",
   textAlign: "center",
 }));
 
 export const BioBox = styled(Box)(({ theme }) => ({
-  paddingLeft: theme.spacing(2),
-  paddingRight: theme.spacing(2),
+  paddingRight: theme.spacing(25),
   [theme.breakpoints.down("md")]: {
     display: "flex",
     justifyContent: "center",

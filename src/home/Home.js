@@ -4,15 +4,15 @@ import {
   Grid,
   CardMedia,
   Typography,
-  Card,
+  Paper,
   Box,
   CardContent,
+  Fab,
 } from "@mui/material";
 import {
   DevicesOutlined,
   EmojiObjectsOutlined,
   SpeedOutlined,
-  LockOutlined,
   ArrowForward,
 } from "@mui/icons-material";
 import { Link } from "react-scroll";
@@ -25,105 +25,94 @@ const Home = () => {
   return (
     <div id="home">
       <Container>
-        <Grid container sx={{ backgroundColor: "skyblue" }}>
-          <Grid item xs={12} md={4}>
-            <AvatarBox>
-              <Avatar />
-            </AvatarBox>
-          </Grid>
-
-          <Grid item xs={12} md={8} sx={{ backgroundColor: "pink" }}>
-            <BioBox mt={2}>
-              <Typography variant="body1">Hello, my name is</Typography>
-            </BioBox>
-            <BioBox mt={1}>
-              <Typography variant="h4">Joyce Tang</Typography>
-            </BioBox>
-            <BioBox mt={2}>
-              <Typography variant="body1">
-                I am a self-started
-                <strong> front-end web developer</strong> focusing on creating
-                <strong> beautiful </strong> web applications while wrting
-                <strong> clean and maintainable </strong> codes.
-              </Typography>
-            </BioBox>
-            <BioBox mt={6}>
-              <Link
-                to="projects"
-                spy={true}
-                smooth={true}
-                offset={0}
-                duration={500}
-              >
-                <StyledButton variant="outlined" endIcon={<ArrowForward />}>
-                  View Projects
-                </StyledButton>
-              </Link>
-            </BioBox>
-          </Grid>
-        </Grid>
-
-        {/* features   */}
-        <Box component="div">
-          <Typography variant="h6" sx={{ textAlign: "center" }}>
-            I am aming for these goals
-          </Typography>
-        </Box>
-        <Box component="div">
+        <Box sx={{ bgcolor: "#cfe8fc", height: "100vh" }}>
           <Grid container>
-            {lists.map((item) => (
-              <Grid item xs={12} sm={6} md={3} xl={3} key={item.title}>
-                <Card
-                  elevation={0}
-                  sx={{
-                    alignItem: "center",
-                    textAlign: "center",
-                    paddingTop: "20px",
-                    width: {
-                      sx: 70,
-                      sm: 100,
-                      md: 150,
-                    },
-                  }}
-                >
-                  <CardMedia>
-                    {
-                      <item.icon
-                        alt={item.title}
-                        sx={{
-                          fontSize: { xs: "25px", md: "45px", xl: "65px" },
-                          margin: "auto",
-                        }}
-                      />
-                    }
-                  </CardMedia>
+            <Grid item xs={12} md={3}>
+              <AvatarBox>
+                <Avatar />
+              </AvatarBox>
+            </Grid>
 
-                  {/* icon section */}
-                  {/* <Fab
+            <Grid item xs={12} md={9}>
+              <BioBox mt={2}>
+                <Typography variant="body1">Hello, my name is</Typography>
+              </BioBox>
+              <BioBox mt={1}>
+                <Typography variant="h3">Joyce Tang</Typography>
+              </BioBox>
+              <BioBox mt={2}>
+                <Typography variant="body1">
+                  I am a self-started
+                  <strong> front-end web developer</strong> focusing on creating
+                  <strong> beautiful </strong> web applications while wrting
+                  <strong> clean and maintainable </strong> codes.
+                </Typography>
+              </BioBox>
+              <BioBox mt={5}>
+                <Link
+                  to="projects"
+                  spy={true}
+                  smooth={true}
+                  offset={0}
+                  duration={500}
+                >
+                  <StyledButton variant="outlined" endIcon={<ArrowForward />}>
+                    View Projects
+                  </StyledButton>
+                </Link>
+              </BioBox>
+            </Grid>
+          </Grid>
+
+          {/* features   */}
+          <Box pt={6}>
+            <Typography variant="h5" sx={{ textAlign: "center" }}>
+              Codeing Overview
+            </Typography>
+          </Box>
+          <Box pt={12}>
+            <Grid container columnSpacing={2} rowSpacing={{ sm: 4, md: 1 }}>
+              {lists.map((item) => (
+                <Grid
+                  item
+                  sm={12}
+                  md={4}
+                  key={item.title}
+                  sx={{ display: "flex", justifyContent: "center" }}
+                >
+                  <Paper
+                    elevation={2}
                     sx={{
-                      backgroundColor: "#00ADB5",
-                      width: "80px",
-                      height: "80px",
+                      alignItem: "center",
+                      textAlign: "center",
+                      padding: 3,
+                      width: 350,
+                      height: 220,
                     }}
                   >
-                    {<item.icon style={{ fontSize: "40px" }} />}
-                  </Fab> */}
-
-                  {/* content section */}
-                  <CardContent>
-                    <Typography
-                      gutterBottom
-                      variant="subtitle1"
-                      component="div"
+                    {/* icon section */}
+                    <Fab
+                      sx={{
+                        backgroundColor: "#00ADB5",
+                        width: "80px",
+                        height: "80px",
+                        top: "-40px",
+                      }}
                     >
+                      {<item.icon style={{ fontSize: "40px" }} />}
+                    </Fab>
+
+                    {/* content section */}
+
+                    <Typography gutterBottom variant="h6">
                       {item.title}
                     </Typography>
                     <Typography variant="body2">{item.body}</Typography>
-                  </CardContent>
-                </Card>
-              </Grid>
-            ))}
-          </Grid>
+                  </Paper>
+                </Grid>
+              ))}
+            </Grid>
+          </Box>
         </Box>
       </Container>
     </div>
@@ -145,11 +134,6 @@ const lists = [
     icon: SpeedOutlined,
     title: "Fast",
     body: "Aimed for making light-weight, fast-loading applications",
-  },
-  {
-    icon: LockOutlined,
-    title: "Secure",
-    body: "Always put the data sercurity in mind",
   },
 ];
 export default Home;
