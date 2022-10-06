@@ -14,7 +14,8 @@ import {
 import MenuIcon from "@mui/icons-material/Menu";
 
 import logo from "../images/jt.svg";
-const navItems = ["Skills", "Projects", "Contact"];
+
+const navItems = ["About", "Skills", "Projects", "Contact"];
 
 const StyledListItem = styled(ListItem)(({ theme }) => ({
   display: "flex",
@@ -28,6 +29,9 @@ const StyledListItem = styled(ListItem)(({ theme }) => ({
 
 const StyledListItemWeb = styled(ListItem)(({ theme }) => ({
   color: "#F5F5F5",
+  paddingRight: theme.spacing(5),
+  fontSize: "13px",
+  textTransform: "uppercase",
   "&:active": {
     borderBottom: "solid 2px #FF2E63",
   },
@@ -53,7 +57,6 @@ const Navbar = () => {
         sx={{ borderBottom: 3, borderColor: "#00ADB5" }}
       >
         <Toolbar>
-          {/* fix: logo to home */}
           <LinkS
             activeClass="active"
             to="home"
@@ -65,10 +68,9 @@ const Navbar = () => {
             <img
               src={logo}
               alt="Joyce Tang"
-              style={{ width: "70px", height: "70px" }}
+              style={{ width: "50px", height: "50px" }}
             />
           </LinkS>
-
           {/* mobile */}
           <Box
             sx={{
@@ -81,7 +83,7 @@ const Navbar = () => {
             }}
           >
             <IconButton onClick={handleOpenNavMenu}>
-              <MenuIcon sx={{ fontSize: 35, color: "#00ADB5 " }} />
+              <MenuIcon sx={{ fontSize: 30, color: "#00ADB5 " }} />
             </IconButton>
 
             <Drawer
@@ -92,14 +94,14 @@ const Navbar = () => {
             >
               <List>
                 {navItems.map((item) => (
-                  <ListItem
+                  <StyledListItem
                     key={item}
                     {...listItemProps}
                     to={item.toLowerCase()}
                     onClick={() => setMobileNavIsOpen(false)}
                   >
-                    <StyledListItem>{item} </StyledListItem>
-                  </ListItem>
+                    {item}
+                  </StyledListItem>
                 ))}
               </List>
             </Drawer>
@@ -109,14 +111,18 @@ const Navbar = () => {
           <Box
             sx={{
               flexGrow: 1,
-              display: { xs: "none", md: "flex", justifyContent: "center" },
+              display: { xs: "none", md: "flex", justifyContent: "flex-end" },
             }}
           >
             <List component={Stack} spacing={4} direction="row">
               {navItems.map((item) => (
-                <ListItem key={item} {...listItemProps} to={item.toLowerCase()}>
-                  <StyledListItemWeb>{item} </StyledListItemWeb>
-                </ListItem>
+                <StyledListItemWeb
+                  key={item}
+                  {...listItemProps}
+                  to={item.toLowerCase()}
+                >
+                  {item}
+                </StyledListItemWeb>
               ))}
             </List>
           </Box>
