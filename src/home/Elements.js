@@ -8,7 +8,8 @@ export const AvatarBox = styled(Box)(({ theme }) => ({
 }));
 
 export const BioBox = styled(Box)(({ theme }) => ({
-  padding: theme.spacing(1),
+  paddingLeft: theme.spacing(2),
+  paddingRight: theme.spacing(2),
   [theme.breakpoints.down("md")]: {
     display: "flex",
     justifyContent: "center",

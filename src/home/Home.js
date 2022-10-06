@@ -14,7 +14,6 @@ import {
   SpeedOutlined,
   LockOutlined,
   ArrowForward,
-  ArrowDownwardOutlined,
 } from "@mui/icons-material";
 import { Link } from "react-scroll";
 
@@ -34,13 +33,13 @@ const Home = () => {
           </Grid>
 
           <Grid item xs={12} md={8} sx={{ backgroundColor: "pink" }}>
-            <BioBox>
+            <BioBox mt={2}>
               <Typography variant="body1">Hello, my name is</Typography>
             </BioBox>
-            <BioBox>
+            <BioBox mt={1}>
               <Typography variant="h4">Joyce Tang</Typography>
             </BioBox>
-            <BioBox>
+            <BioBox mt={2}>
               <Typography variant="body1">
                 I am a self-started
                 <strong> front-end web developer</strong> focusing on creating
@@ -48,7 +47,7 @@ const Home = () => {
                 <strong> clean and maintainable </strong> codes.
               </Typography>
             </BioBox>
-            <BioBox>
+            <BioBox mt={6}>
               <Link
                 to="projects"
                 spy={true}
