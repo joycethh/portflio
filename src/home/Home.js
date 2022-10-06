@@ -4,8 +4,8 @@ import {
   Grid,
   CardMedia,
   Typography,
-  styled,
   Card,
+  Box,
   CardContent,
 } from "@mui/material";
 import {
@@ -13,27 +13,57 @@ import {
   EmojiObjectsOutlined,
   SpeedOutlined,
   LockOutlined,
+  ArrowForward,
+  ArrowDownwardOutlined,
 } from "@mui/icons-material";
+import { Link } from "react-scroll";
 
-const Box = styled("div")(({ theme }) => ({
-  padding: theme.spacing(6),
-  display: "flex",
-  justifyContent: "center",
-  textAlign: "center",
-}));
+import { AvatarBox, BioBox, StyledButton } from "./Elements";
+
+import Avatar from "../Avatar";
+
 const Home = () => {
   return (
     <div id="home">
       <Container>
-        {/* decription */}
-        <Box component="div">
-          <Typography variant="body1" sx={{ width: "80%" }}>
-            Hi, I am Joyce Tang, a self-started
-            <strong> front-end web developer</strong> focusing on creating
-            <strong> beautiful </strong> web applications while wrting{" "}
-            <strong> clean and maintainable </strong> codes.
-          </Typography>
-        </Box>
+        <Grid container sx={{ backgroundColor: "skyblue" }}>
+          <Grid item xs={12} md={4}>
+            <AvatarBox>
+              <Avatar />
+            </AvatarBox>
+          </Grid>
+
+          <Grid item xs={12} md={8} sx={{ backgroundColor: "pink" }}>
+            <BioBox>
+              <Typography variant="body1">Hello, my name is</Typography>
+            </BioBox>
+            <BioBox>
+              <Typography variant="h4">Joyce Tang</Typography>
+            </BioBox>
+            <BioBox>
+              <Typography variant="body1">
+                I am a self-started
+                <strong> front-end web developer</strong> focusing on creating
+                <strong> beautiful </strong> web applications while wrting
+                <strong> clean and maintainable </strong> codes.
+              </Typography>
+            </BioBox>
+            <BioBox>
+              <Link
+                to="projects"
+                spy={true}
+                smooth={true}
+                offset={0}
+                duration={500}
+              >
+                <StyledButton variant="outlined" endIcon={<ArrowForward />}>
+                  View Projects
+                </StyledButton>
+              </Link>
+            </BioBox>
+          </Grid>
+        </Grid>
+
         {/* features   */}
         <Box component="div">
           <Typography variant="h6" sx={{ textAlign: "center" }}>
