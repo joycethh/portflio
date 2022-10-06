@@ -72,7 +72,10 @@ const front = [
     title: "React",
     src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original-wordmark.svg",
   },
-
+  {
+    title: "Redux",
+    src: "https://cdn.jsdelivr.net/npm/simple-icons@3.13.0/icons/redux.svg",
+  },
   {
     title: "JavaScript",
     src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
