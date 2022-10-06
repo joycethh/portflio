@@ -21,16 +21,13 @@ const StyledListItem = styled(ListItem)(({ theme }) => ({
   textAlign: "center",
   justifyContent: "center",
   padding: theme.spacing(1, 0),
-  "&:hover": {
+  "&:active": {
     backgroundColor: "#61C0BF",
   },
 }));
 
-const StyledLink = styled("a")(({ theme }) => ({
-  color: "#fff",
-  textAlign: "center",
-  justifyContent: "center",
-  padding: theme.spacing(1, 0),
+const StyledListItemWeb = styled(ListItem)(({ theme }) => ({
+  color: "#F5F5F5",
   "&:active": {
     borderBottom: "solid 2px #FF2E63",
   },
@@ -117,16 +114,8 @@ const Navbar = () => {
           >
             <List component={Stack} spacing={4} direction="row">
               {navItems.map((item) => (
-                <ListItem key={item}>
-                  <StyledLink
-                    to={item.toLowerCase()}
-                    spy={true}
-                    smooth={true}
-                    offset={-70}
-                    duration={500}
-                  >
-                    {item}
-                  </StyledLink>
+                <ListItem key={item} {...listItemProps} to={item.toLowerCase()}>
+                  <StyledListItemWeb>{item} </StyledListItemWeb>
                 </ListItem>
               ))}
             </List>
