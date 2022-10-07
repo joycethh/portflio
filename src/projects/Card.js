@@ -4,7 +4,7 @@ import {
   CardMedia,
   Button,
   Stack,
-  CardContent,
+  Box,
   Typography,
   Chip,
   styled,
@@ -50,13 +50,37 @@ const MyCard = ({ image, alt, label, description, siteLink, codeLink }) => {
     <>
       <Card sx={{ position: "relative" }}>
         <StyledImg component="img" image={image} alt={alt} />
-        <CardContent>
-          <Stack direction="row" spacing={0.8}>
+
+        <Box
+          sx={{
+            paddingTop: 2,
+          }}
+        >
+          <Box sx={{ textAlign: "center" }}>
+            <Typography variant="h6">MERN app</Typography>
+          </Box>
+          <Box
+            sx={{
+              textAlign: "center",
+              pb: 1,
+            }}
+          >
             {label.map((value) => (
-              <Chip label={value} key={value} />
+              <Chip
+                label={value}
+                key={value}
+                size="small"
+                sx={{
+                  mr: 1,
+                  backgroundColor: "#434e5e",
+                  color: "#f5f5f5",
+                  display: "inline-block",
+                }}
+              />
             ))}
-          </Stack>
-        </CardContent>
+          </Box>
+        </Box>
+
         <OverlayBox component="div">
           <TextBox>
             <Typography variant="body1" pb={2}>
