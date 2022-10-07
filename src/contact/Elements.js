@@ -3,7 +3,7 @@ import { Paper, styled } from "@mui/material";
 export const SpeechBubble = styled(Paper)(({ theme }) => ({
   position: "relative",
   background: "#faf9f9",
-  borderRadius: "10px",
+  borderRadius: "5px",
   paddingBottom: theme.spacing(5),
 
   "::after": {

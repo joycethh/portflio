@@ -13,7 +13,7 @@ import { Send } from "@mui/icons-material/";
 
 const Input = ({ half, name, label, type, rows }) => {
   return (
-    <Grid item xs={12} sm={half ? 6 : 12}>
+    <Grid item xs={12} md={half ? 6 : 12}>
       <TextField
         name={name}
         label={label}
