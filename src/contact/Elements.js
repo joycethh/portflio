@@ -4,7 +4,7 @@ export const SpeechBubble = styled(Paper)(({ theme }) => ({
   position: "relative",
   background: "#faf9f9",
   borderRadius: "10px",
-  padding: 0,
+  paddingBottom: theme.spacing(5),
 
   "::after": {
     content: `""`,

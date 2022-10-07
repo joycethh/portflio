@@ -1,15 +1,15 @@
 import React from "react";
-import { Stack, Button } from "@mui/material";
+import { Box, Button } from "@mui/material";
 
 import { GitHub, LinkedIn, Email } from "@mui/icons-material/";
 const Socials = () => {
   return (
     <div>
-      <Stack
-        direction="row"
+      <Box
         sx={{
           display: "flex",
           justifyContent: "center",
+          backgroundColor: "#fdfdfd",
         }}
       >
         <Button
@@ -33,7 +33,7 @@ const Socials = () => {
         >
           <Email sx={{ fontSize: { xs: 25, md: 35 } }} />
         </Button>
-      </Stack>
+      </Box>
     </div>
   );
 };
