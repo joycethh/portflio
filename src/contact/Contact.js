@@ -4,13 +4,13 @@ import {
   Box,
   Typography,
   Paper,
-  CardContent,
   Dialog,
   DialogTitle,
   DialogContent,
   DialogContentText,
 } from "@mui/material";
 
+import { SpeechBubble } from "./Elements";
 import SectionContainer from "../SectionContainer";
 import Form from "./Form";
 import Socials from "../Socials";
@@ -57,18 +57,29 @@ const Contact = () => {
           <Box p={4} sx={{ display: "flex", justifyContent: "center" }}>
             <Avatar />
           </Box>
-          <Paper>
-            <CardContent sx={{ padding: 4 }}>
-              <Typography variant="body1" gutterBottom>
+
+          {/* speech bubble */}
+          <SpeechBubble>
+            <Box
+              sx={{
+                display: "flex",
+                justifyContent: "center",
+                pt: 5,
+                pl: 4,
+                pr: 4,
+                pb: 2,
+              }}
+            >
+              <Typography variant="body1">
                 I am open with new opporturnities. Send me a message and let's
                 make something nice!
               </Typography>
-            </CardContent>
+            </Box>
 
-            <CardContent
+            <Box
               sx={{
-                paddingLeft: 4,
-                paddingRight: 4,
+                pl: 4,
+                pr: 4,
                 display: "flex",
                 justifyContent: "center",
               }}
@@ -76,9 +87,9 @@ const Contact = () => {
               <Typography variant="h6">
                 You can also find me on the following channels
               </Typography>
-            </CardContent>
+            </Box>
             <Socials />
-          </Paper>
+          </SpeechBubble>
 
           <form ref={refForm} onSubmit={sendEmail}>
             <Form />
