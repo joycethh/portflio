@@ -1,19 +1,10 @@
 import React from "react";
+import { Container, Grid, Typography, Paper, Box, Fab } from "@mui/material";
 import {
-  Container,
-  Grid,
-  CardMedia,
-  Typography,
-  Paper,
-  Box,
-  CardContent,
-  Fab,
-} from "@mui/material";
-import {
-  DevicesOutlined,
-  EmojiObjectsOutlined,
-  SpeedOutlined,
+  ImportantDevices,
   ArrowForward,
+  Code,
+  TipsAndUpdates,
 } from "@mui/icons-material";
 import { Link } from "react-scroll";
 
@@ -25,7 +16,7 @@ const Home = () => {
   return (
     <div id="home">
       <Container>
-        <Box sx={{ bgcolor: "#cfe8fc", height: "100vh" }}>
+        <Box>
           <Grid container>
             <Grid item xs={12} md={3}>
               <AvatarBox>
@@ -67,7 +58,7 @@ const Home = () => {
           {/* features   */}
           <Box pt={6}>
             <Typography variant="h5" sx={{ textAlign: "center" }}>
-              Codeing Overview
+              Skills Overview
             </Typography>
           </Box>
           <Box pt={12}>
@@ -90,19 +81,21 @@ const Home = () => {
                       height: 220,
                     }}
                   >
-                    {/* icon section */}
                     <Fab
                       sx={{
                         backgroundColor: "#00ADB5",
+
                         width: "80px",
                         height: "80px",
                         top: "-40px",
                       }}
                     >
-                      {<item.icon style={{ fontSize: "40px" }} />}
+                      {
+                        <item.icon
+                          style={{ fontSize: "40px", color: "#FAF0E6" }}
+                        />
+                      }
                     </Fab>
-
-                    {/* content section */}
 
                     <Typography gutterBottom variant="h6">
                       {item.title}
@@ -121,19 +114,19 @@ const Home = () => {
 
 const lists = [
   {
-    icon: DevicesOutlined,
-    title: "Responsive",
-    body: "A focus placed on the layouts for any screens",
+    icon: Code,
+    title: "Web Development",
+    body: "I am always aimed for responsive layouts communicative and creative designs and fast-loading web applications. ",
   },
   {
-    icon: EmojiObjectsOutlined,
-    title: "Creative",
-    body: "Preference for interative and communicative designs",
+    icon: ImportantDevices,
+    title: "Web Design",
+    body: "A focus placed on the communication, interation and probelm-solving through thoughtful web designs.",
   },
   {
-    icon: SpeedOutlined,
-    title: "Fast",
-    body: "Aimed for making light-weight, fast-loading applications",
+    icon: TipsAndUpdates,
+    title: "Ability of Learning",
+    body: "It is really important to keep in trend with rapid developing technologies. Strong preference on using the newest and reliable techonologies",
   },
 ];
 export default Home;
