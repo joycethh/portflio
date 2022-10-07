@@ -20,7 +20,7 @@ const Home = () => {
           <Grid container>
             <Grid item xs={12} md={3}>
               <AvatarBox>
-                <Avatar />
+                <Avatar square={true} />
               </AvatarBox>
             </Grid>
 

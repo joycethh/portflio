@@ -3,7 +3,7 @@ import { useRef, useState } from "react";
 import {
   Box,
   Typography,
-  Card,
+  Paper,
   CardContent,
   Dialog,
   DialogTitle,
@@ -14,6 +14,7 @@ import {
 import SectionContainer from "../SectionContainer";
 import Form from "./Form";
 import Socials from "../Socials";
+import Avatar from "../Avatar";
 
 const Contact = () => {
   const [error, setError] = useState(null);
@@ -53,7 +54,10 @@ const Contact = () => {
             margin: "auto",
           }}
         >
-          <Card>
+          <Box p={4} sx={{ display: "flex", justifyContent: "center" }}>
+            <Avatar />
+          </Box>
+          <Paper>
             <CardContent sx={{ padding: 4 }}>
               <Typography variant="body1" gutterBottom>
                 I am open with new opporturnities. Send me a message and let's
@@ -74,7 +78,7 @@ const Contact = () => {
               </Typography>
             </CardContent>
             <Socials />
-          </Card>
+          </Paper>
 
           <form ref={refForm} onSubmit={sendEmail}>
             <Form />
