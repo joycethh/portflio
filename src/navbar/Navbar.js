@@ -50,6 +50,13 @@ const Navbar = () => {
     duration: 500,
   };
 
+  const WeblistItemProps = {
+    component: LinkS,
+    spy: true,
+    smooth: true,
+    offset: -140,
+    duration: 500,
+  };
   return (
     <div>
       <AppBar elevation={0} sx={{ borderBottom: 3, borderColor: "#00ADB5" }}>
@@ -115,7 +122,7 @@ const Navbar = () => {
               {navItems.map((item) => (
                 <StyledListItemWeb
                   key={item}
-                  {...listItemProps}
+                  {...WeblistItemProps}
                   to={item.toLowerCase()}
                 >
                   {item}

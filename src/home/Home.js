@@ -10,7 +10,7 @@ import Avatar from "../Avatar";
 const Home = () => {
   return (
     <div id="about">
-      <Box sx={{ backgroundColor: "primary.main" }}>
+      <Box sx={{ backgroundColor: "primary.main", p: 6 }}>
         <Container>
           <Grid container>
             <Grid item xs={12} md={3}>
