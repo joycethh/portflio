@@ -9,8 +9,8 @@ const lightTheme = createTheme({
     secondary: {
       main: "#FF2E63", //pink red
     },
-    error: {
-      main: "#ff9800", //yellow
+    background: {
+      default: "#EAEAEA",
     },
   },
   components: {
