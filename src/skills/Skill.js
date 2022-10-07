@@ -7,7 +7,6 @@ import {
   Typography,
   styled,
   Paper,
-  Box,
   Fab,
 } from "@mui/material";
 import { ImportantDevices, Code, TipsAndUpdates } from "@mui/icons-material";
@@ -28,12 +27,10 @@ const Skill = () => {
         <TitleBox component="div">
           <Typography variant="h5">Skills Overview</Typography>
         </TitleBox>
-
         <Grid
           container
           spacing={{ xs: 5, md: 2 }}
           sx={{
-            backgroundColor: "coral",
             display: "flex",
             justifyContent: "center",
             pt: 12,
