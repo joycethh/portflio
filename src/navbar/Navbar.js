@@ -52,10 +52,7 @@ const Navbar = () => {
 
   return (
     <div>
-      <AppBar
-        position="sticky"
-        sx={{ borderBottom: 3, borderColor: "#00ADB5" }}
-      >
+      <AppBar elevation={0} sx={{ borderBottom: 3, borderColor: "#00ADB5" }}>
         <Toolbar>
           <LinkS
             activeClass="active"

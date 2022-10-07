@@ -13,15 +13,15 @@ const lightTheme = createTheme({
       default: "#EAEAEA",
     },
   },
-  components: {
-    MuiAppBar: {
-      styleOverrides: {
-        colorPrimary: {
-          backgroundColor: "#252A34",
-        },
-      },
-    },
-  },
+  // components: {
+  //   MuiAppBar: {
+  //     styleOverrides: {
+  //       colorPrimary: {
+  //         backgroundColor: "#252A34",
+  //       },
+  //     },
+  //   },
+  // },
 });
 
 export default lightTheme;
