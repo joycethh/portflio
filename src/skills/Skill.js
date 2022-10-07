@@ -33,8 +33,6 @@ const Skill = () => {
           sx={{
             display: "flex",
             justifyContent: "center",
-            pt: 12,
-            pb: 3,
           }}
         >
           {lists.map((item) => (
@@ -49,10 +47,10 @@ const Skill = () => {
               }}
             >
               <Paper
-                elevation={1}
                 sx={{
                   alignItem: "center",
                   textAlign: "center",
+                  marginTop: "50px",
                   padding: 3,
                   width: { xs: 350, md: 300, lg: 350 },
                   height: { xs: 220, md: 270, lg: 220 },
@@ -82,7 +80,7 @@ const Skill = () => {
         <TitleBox component="div">
           <Typography variant="h5">My Top Skills</Typography>
         </TitleBox>
-        <Grid container pt={12} pb={3}>
+        <Grid container>
           {front.map((item) => (
             <Grid item xs={6} sm={3} md={2} key={item.title}>
               <Card
