@@ -40,6 +40,7 @@ const Projects = () => {
                   description={item.description}
                   siteLink={item.siteLink}
                   codeLink={item.codeLink}
+                  title={item.title}
                 />
               </Grid>
             ))}

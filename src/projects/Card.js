@@ -45,7 +45,15 @@ const TextBox = styled("div")(({ theme }) => ({
   transform: "translate(-50%, -50%)",
 }));
 
-const MyCard = ({ image, alt, label, description, siteLink, codeLink }) => {
+const MyCard = ({
+  image,
+  alt,
+  label,
+  description,
+  siteLink,
+  codeLink,
+  title,
+}) => {
   return (
     <>
       <Card sx={{ position: "relative" }}>
@@ -57,8 +65,9 @@ const MyCard = ({ image, alt, label, description, siteLink, codeLink }) => {
           }}
         >
           <Box sx={{ textAlign: "center" }}>
-            <Typography variant="h6">MERN app</Typography>
+            <Typography variant="h6">{title}</Typography>
           </Box>
+
           <Box
             sx={{
               textAlign: "center",

@@ -9,8 +9,8 @@ import simongame from "../images/simongame.png";
 
 const projectData = [
   {
-    title: "Memo",
-    label: ["React", "Redux", "Mongoose ", "Express", "NodeJS", "Google Oauth"],
+    title: "MERN App",
+    label: ["React", "Redux", "Mongoose ", "Autentication"],
     description:
       "A social media web app using CRUD princinples that allows users to create, update and delete posts. ",
     image: memory,
@@ -18,8 +18,8 @@ const projectData = [
     codeLink: "https://github.com/joycethh/memory-server.git",
   },
   {
-    title: "Blog",
-    label: ["Json Server", "React"],
+    title: "Json Server Product",
+    label: ["React", "Json Server"],
     description:
       "This blog web app uses react for the front and fake REST API with json server.",
     image: blog,
@@ -27,8 +27,8 @@ const projectData = [
     codeLink: "https://github.com/joycethh/json-server-blog-project.git",
   },
   {
-    title: "Workout",
-    label: ["Authentication", "Mern", "NodeJS"],
+    title: "MERN App",
+    label: ["React", "Mongoose", "Authentication"],
     description:
       "It is a MERN app using MongoDB cluster, Express, React, Node JS technologies. And a local authentication added.",
     image: workout,
@@ -36,8 +36,8 @@ const projectData = [
     codeLink: "https://github.com/joycethh/workout-frontend.git",
   },
   {
-    title: "Note",
-    label: ["React", "Mongoose"],
+    title: "MERN App",
+    label: ["React", "NodeJS", "Mongoose"],
     description:
       "It is a light weight MERN web app that allow users to create and delete posts.",
     image: note,
@@ -45,7 +45,7 @@ const projectData = [
     codeLink: "https://github.com/joycethh/note-server.git",
   },
   {
-    title: "Frontend",
+    title: "MaterialUi Product",
     label: ["React", "MUI5"],
     description: "a static react website uses Material UI css library. ",
     image: mui,
@@ -53,7 +53,7 @@ const projectData = [
     codeLink: "https://github.com/joycethh/mui-practice",
   },
   {
-    title: "Simon Game",
+    title: "JS/Css Product",
     label: ["HTML", "CSS", "JavaScript"],
     description: "Simon game built with javascript, html and css",
     image: simongame,

@@ -49,7 +49,7 @@ const Skill = () => {
               }}
             >
               <Paper
-                elevation={2}
+                elevation={1}
                 sx={{
                   alignItem: "center",
                   textAlign: "center",
@@ -63,7 +63,7 @@ const Skill = () => {
                     backgroundColor: "#00ADB5",
                     width: "80px",
                     height: "80px",
-                    top: "-50px",
+                    top: "-60px",
                   }}
                 >
                   {<item.icon style={{ fontSize: "40px", color: "#FAF0E6" }} />}
@@ -82,7 +82,7 @@ const Skill = () => {
         <TitleBox component="div">
           <Typography variant="h5">My Top Skills</Typography>
         </TitleBox>
-        <Grid container>
+        <Grid container pt={12} pb={3}>
           {front.map((item) => (
             <Grid item xs={6} sm={3} md={2} key={item.title}>
               <Card
