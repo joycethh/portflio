@@ -30,9 +30,9 @@ const Projects = () => {
         </Box>
 
         <TabPanel value={value} index={0}>
-          <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2 }}>
+          <Grid container spacing={2}>
             {projectData.map((item, i) => (
-              <Grid item sm={12} md={6} lg={4} key={i}>
+              <Grid item sm={12} md={6} key={i}>
                 <MyCard
                   image={item.image}
                   alt={item.title}
@@ -48,7 +48,7 @@ const Projects = () => {
         </TabPanel>
 
         <TabPanel value={value} index={1}>
-          <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2 }}>
+          <Grid container spacing={2}>
             {projectData
               .map((element) => {
                 return {
@@ -58,7 +58,7 @@ const Projects = () => {
               })
               .filter((elem) => elem.labels.length > 0)
               .map((item, i) => (
-                <Grid item sm={12} md={6} lg={4} key={i}>
+                <Grid item sm={12} md={6} key={i}>
                   <MyCard
                     image={item.image}
                     alt={item.title}
@@ -73,7 +73,7 @@ const Projects = () => {
         </TabPanel>
 
         <TabPanel value={value} index={2}>
-          <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2 }}>
+          <Grid container spacing={2}>
             {projectData
               .map((element) => {
                 return {
@@ -83,7 +83,7 @@ const Projects = () => {
               })
               .filter((elem) => elem.labels.length > 0)
               .map((item, i) => (
-                <Grid item sm={12} md={6} lg={4} key={i}>
+                <Grid item sm={12} md={6} key={i}>
                   <MyCard
                     image={item.image}
                     alt={item.title}
@@ -98,7 +98,7 @@ const Projects = () => {
         </TabPanel>
 
         <TabPanel value={value} index={3}>
-          <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2 }}>
+          <Grid container spacing={2}>
             {projectData
               .map((element) => {
                 return {
@@ -110,7 +110,7 @@ const Projects = () => {
               })
               .filter((elem) => elem.labels.length > 0)
               .map((item, i) => (
-                <Grid item sm={12} md={6} lg={4} key={i}>
+                <Grid item sm={12} md={6} key={i}>
                   <MyCard
                     image={item.image}
                     alt={item.title}
