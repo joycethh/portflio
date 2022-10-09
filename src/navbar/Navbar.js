@@ -29,7 +29,6 @@ const StyledListItem = styled(ListItem)(({ theme }) => ({
 
 const StyledListItemWeb = styled(ListItem)(({ theme }) => ({
   color: "#F5F5F5",
-  paddingRight: theme.spacing(5),
   fontSize: "13px",
   textTransform: "uppercase",
   "&:active": {
@@ -54,7 +53,7 @@ const Navbar = () => {
     component: LinkS,
     spy: true,
     smooth: true,
-    offset: -140,
+    offset: -100,
     duration: 500,
   };
   return (
