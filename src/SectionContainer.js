@@ -1,21 +1,5 @@
 import React from "react";
-import {
-  Container,
-  Divider,
-  Typography,
-  Chip,
-  styled,
-  Box,
-} from "@mui/material";
-
-const StyledChip = styled(Chip)(({ theme }) => ({
-  padding: theme.spacing(1),
-  textTransform: "uppercase",
-  [theme.breakpoints.up("md")]: {
-    fontSize: "18px",
-    padding: theme.spacing(0.5, 1.2),
-  },
-}));
+import { Container, Typography, styled, Box } from "@mui/material";
 
 const StyledTitleBox = styled(Box)(({ theme }) => ({
   width: "fit-content",
@@ -23,13 +7,11 @@ const StyledTitleBox = styled(Box)(({ theme }) => ({
   paddingBottom: theme.spacing(2),
   paddingTop: theme.spacing(10),
   textAlign: "center",
-  // borderBottom: "3px solid #FF2E63",
   textTransform: "uppercase",
-  // backgroundColor: "pink",
 }));
 
 const HeaderBar = styled("div")(({ theme }) => ({
-  backgroundColor: "#444649",
+  backgroundColor: theme.palette.secondary.main,
   height: "4px",
   width: "70px",
   display: "block",
@@ -41,7 +23,9 @@ const SectionContainer = ({ title, children }) => {
       <Container>
         <div>
           <StyledTitleBox>
-            <Typography variant="h4">{title}</Typography>
+            <Typography variant="h4" sx={{ fontWeight: "600" }}>
+              {title}
+            </Typography>
           </StyledTitleBox>
           <HeaderBar />
         </div>
