@@ -1,5 +1,12 @@
 import React from "react";
-import { Container, Divider, Chip, styled, Box } from "@mui/material";
+import {
+  Container,
+  Divider,
+  Typography,
+  Chip,
+  styled,
+  Box,
+} from "@mui/material";
 
 const StyledChip = styled(Chip)(({ theme }) => ({
   padding: theme.spacing(1),
@@ -10,16 +17,27 @@ const StyledChip = styled(Chip)(({ theme }) => ({
   },
 }));
 
+const StyledTitleBox = styled(Box)(({ theme }) => ({
+  width: "fit-content",
+  margin: "auto",
+  paddingBottom: theme.spacing(2),
+  paddingTop: theme.spacing(10),
+  textAlign: "center",
+  borderBottom: "3px solid #FF2E63",
+  textTransform: "uppercase",
+
+  // ":active": {
+  //   borderBottom: "1px solid red",
+  // },
+}));
 const SectionContainer = ({ title, children }) => {
   return (
     <>
       <Container>
         <div>
-          <Box pb={4.5} pt={10}>
-            <Divider>
-              <StyledChip label={title} size="large" color="primary" />
-            </Divider>
-          </Box>
+          <StyledTitleBox>
+            <Typography variant="h4">{title}</Typography>
+          </StyledTitleBox>
         </div>
         <div>{children}</div>
       </Container>

@@ -19,6 +19,7 @@ const Projects = () => {
           sx={{
             display: "flex",
             justifyContent: "center",
+            paddingTop: 6,
           }}
         >
           <Tabs variant="scrollable" value={value} onChange={handleChange}>
