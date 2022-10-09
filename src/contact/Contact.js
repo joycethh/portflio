@@ -54,7 +54,11 @@ const Contact = () => {
               margin: "auto",
             }}
           >
-            <Box p={4} sx={{ display: "flex", justifyContent: "center" }}>
+            <Box
+              pt={7}
+              pb={4}
+              sx={{ display: "flex", justifyContent: "center" }}
+            >
               <Avatar />
             </Box>
 
