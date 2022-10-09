@@ -21,7 +21,7 @@ export const BioBox = styled(Box)(({ theme }) => ({
 
 export const StyledSpan = styled("span")(({ theme }) => ({
   padding: "0 2px",
-  color: "#252A34",
+  color: "#003e41",
   fontWeight: 700,
 }));
 export const StyledButton = styled(Button)(({ theme }) => ({

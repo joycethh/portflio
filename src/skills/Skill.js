@@ -1,6 +1,7 @@
 import React from "react";
 import {
   Card,
+  Box,
   CardMedia,
   CardContent,
   Grid,
@@ -13,7 +14,7 @@ import { ImportantDevices, Code, TipsAndUpdates } from "@mui/icons-material";
 import SectionContainer from "../SectionContainer";
 
 const TitleBox = styled("div")(({ theme }) => ({
-  padding: theme.spacing(6),
+  padding: theme.spacing(7),
   display: "flex",
   justifyContent: "center",
   textAlign: "center",
@@ -22,99 +23,105 @@ const TitleBox = styled("div")(({ theme }) => ({
 const Skill = () => {
   return (
     <div id="skills">
-      <SectionContainer title="Skills">
-        {/* overview   */}
-        <TitleBox component="div">
-          <Typography variant="h5">Skills Overview</Typography>
-        </TitleBox>
-        <Grid
-          container
-          spacing={{ xs: 5, md: 2 }}
-          sx={{
-            display: "flex",
-            justifyContent: "center",
-          }}
-        >
-          {lists.map((item) => (
-            <Grid
-              item
-              sm={12}
-              md={4}
-              key={item.title}
-              sx={{
-                display: "flex",
-                justifyContent: "center",
-              }}
-            >
-              <Paper
+      <Box sx={{ backgroundColor: "white", p: 6 }}>
+        <SectionContainer title="Skills">
+          {/* overview   */}
+          <TitleBox component="div">
+            <Typography variant="h5">Skills Overview</Typography>
+          </TitleBox>
+          <Grid
+            container
+            spacing={{ xs: 5, md: 2 }}
+            sx={{
+              display: "flex",
+              justifyContent: "center",
+            }}
+          >
+            {lists.map((item) => (
+              <Grid
+                item
+                sm={12}
+                md={4}
+                key={item.title}
                 sx={{
-                  alignItem: "center",
-                  textAlign: "center",
-                  marginTop: "50px",
-                  padding: 3,
-                  width: { xs: 350, md: 300, lg: 350 },
-                  height: { xs: 220, md: 270, lg: 220 },
+                  display: "flex",
+                  justifyContent: "center",
                 }}
               >
-                <Fab
+                <Paper
                   sx={{
-                    backgroundColor: "#00ADB5",
-                    width: "80px",
-                    height: "80px",
-                    top: "-60px",
+                    alignItem: "center",
+                    textAlign: "center",
+                    marginTop: "50px",
+                    padding: 3,
+                    width: { xs: 350, md: 300, lg: 350 },
+                    height: { xs: 220, md: 270, lg: 220 },
                   }}
                 >
-                  {<item.icon style={{ fontSize: "40px", color: "#FAF0E6" }} />}
-                </Fab>
+                  <Fab
+                    sx={{
+                      backgroundColor: "#00ADB5",
+                      width: "80px",
+                      height: "80px",
+                      top: "-60px",
+                    }}
+                  >
+                    {
+                      <item.icon
+                        style={{ fontSize: "40px", color: "#FAF0E6" }}
+                      />
+                    }
+                  </Fab>
 
-                <Typography gutterBottom variant="h6">
-                  {item.title}
-                </Typography>
-                <Typography variant="body2">{item.body}</Typography>
-              </Paper>
-            </Grid>
-          ))}
-        </Grid>
-
-        {/* lists */}
-        <TitleBox component="div">
-          <Typography variant="h5">My Top Skills</Typography>
-        </TitleBox>
-        <Grid container>
-          {front.map((item) => (
-            <Grid item xs={6} sm={3} md={2} key={item.title}>
-              <Card
-                elevation={0}
-                sx={{
-                  alignItem: "center",
-                  textAlign: "center",
-                  paddingTop: "20px",
-                  width: {
-                    sx: 50,
-                    sm: 80,
-                    md: 120,
-                  },
-                }}
-              >
-                <CardMedia
-                  component="img"
-                  image={item.src}
-                  alt={item.title}
-                  sx={{
-                    width: { xs: "35px", md: "60px", xl: "80px" },
-                    margin: "auto",
-                  }}
-                />
-                <CardContent>
-                  <Typography variant="body1" component="div" gutterBottom>
+                  <Typography gutterBottom variant="h6">
                     {item.title}
                   </Typography>
-                </CardContent>
-              </Card>
-            </Grid>
-          ))}
-        </Grid>
-      </SectionContainer>
+                  <Typography variant="body2">{item.body}</Typography>
+                </Paper>
+              </Grid>
+            ))}
+          </Grid>
+
+          {/* lists */}
+          <TitleBox component="div">
+            <Typography variant="h5">My Top Skills</Typography>
+          </TitleBox>
+          <Grid container>
+            {front.map((item) => (
+              <Grid item xs={6} sm={3} md={2} key={item.title}>
+                <Card
+                  elevation={0}
+                  sx={{
+                    alignItem: "center",
+                    textAlign: "center",
+                    paddingTop: "20px",
+                    width: {
+                      sx: 50,
+                      sm: 80,
+                      md: 120,
+                    },
+                  }}
+                >
+                  <CardMedia
+                    component="img"
+                    image={item.src}
+                    alt={item.title}
+                    sx={{
+                      width: { xs: "35px", md: "60px", xl: "80px" },
+                      margin: "auto",
+                    }}
+                  />
+                  <CardContent>
+                    <Typography variant="body1" component="div" gutterBottom>
+                      {item.title}
+                    </Typography>
+                  </CardContent>
+                </Card>
+              </Grid>
+            ))}
+          </Grid>
+        </SectionContainer>
+      </Box>
     </div>
   );
 };

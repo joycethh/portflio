@@ -47,7 +47,8 @@ const Home = () => {
                   <StyledButton
                     variant="contained"
                     size="md"
-                    sx={{ backgroundColor: "#667490", color: "#fcfcfc" }}
+                    sx={{ color: "#fcfcfc", backgroundColor: "#00878e" }}
+                    // sx={{ backgroundColor: "#444649", color: "#fcfcfc" }}
                     endIcon={<ArrowForward />}
                   >
                     View Projects
