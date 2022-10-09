@@ -44,7 +44,12 @@ const Home = () => {
                   offset={0}
                   duration={500}
                 >
-                  <StyledButton variant="outlined" endIcon={<ArrowForward />}>
+                  <StyledButton
+                    variant="contained"
+                    size="md"
+                    sx={{ backgroundColor: "#667490", color: "#fcfcfc" }}
+                    endIcon={<ArrowForward />}
+                  >
                     View Projects
                   </StyledButton>
                 </Link>
