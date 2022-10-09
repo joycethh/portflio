@@ -24,7 +24,7 @@ const Home = () => {
                 <Typography variant="body1">Hello, my name is</Typography>
               </BioBox>
               <BioBox mt={1}>
-                <Typography variant="h3" sx={{ fontWeight: "600" }}>
+                <Typography variant="h3" sx={{ fontWeight: "700" }}>
                   Joyce Tang
                 </Typography>
               </BioBox>
@@ -50,7 +50,6 @@ const Home = () => {
                     variant="contained"
                     size="md"
                     sx={{ color: "#fcfcfc", backgroundColor: "#00878e" }}
-                    // sx={{ backgroundColor: "#444649", color: "#fcfcfc" }}
                     endIcon={<ArrowForward />}
                   >
                     View Projects

@@ -23,7 +23,7 @@ const SectionContainer = ({ title, children }) => {
       <Container>
         <div>
           <StyledTitleBox>
-            <Typography variant="h4" sx={{ fontWeight: "600" }}>
+            <Typography variant="h4" sx={{ fontWeight: "700" }}>
               {title}
             </Typography>
           </StyledTitleBox>

@@ -40,7 +40,9 @@ const Form = () => {
     <Box pt={5}>
       <Paper sx={{ backgroundColor: "#faf9f9", borderRadius: "5px" }}>
         <TitleBox>
-          <Typography variant="h5">Get in Touch</Typography>
+          <Typography variant="h5" sx={{ fontWeight: "500" }}>
+            Get in Touch
+          </Typography>
         </TitleBox>
         <Grid container spacing={3} p={5}>
           <Input name="name" label="Name" half />

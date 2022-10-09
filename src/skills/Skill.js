@@ -14,7 +14,8 @@ import { ImportantDevices, Code, TipsAndUpdates } from "@mui/icons-material";
 import SectionContainer from "../SectionContainer";
 
 const TitleBox = styled("div")(({ theme }) => ({
-  padding: theme.spacing(7),
+  paddingTop: theme.spacing(9),
+  paddingBottom: theme.spacing(7),
   display: "flex",
   justifyContent: "center",
   textAlign: "center",
@@ -27,7 +28,9 @@ const Skill = () => {
         <SectionContainer title="Skills">
           {/* overview   */}
           <TitleBox component="div">
-            <Typography variant="h5">Skills Overview</Typography>
+            <Typography variant="h5" sx={{ fontWeight: "500" }}>
+              Skills Overview
+            </Typography>
           </TitleBox>
           <Grid
             container
@@ -55,7 +58,7 @@ const Skill = () => {
                     marginTop: "50px",
                     padding: 3,
                     width: { xs: 350, md: 300, lg: 350 },
-                    height: { xs: 220, md: 270, lg: 220 },
+                    height: { xs: 240, md: 270, lg: 240 },
                   }}
                 >
                   <Fab
@@ -73,7 +76,11 @@ const Skill = () => {
                     }
                   </Fab>
 
-                  <Typography gutterBottom variant="h6">
+                  <Typography
+                    gutterBottom
+                    variant="h6"
+                    sx={{ fontWeight: "500" }}
+                  >
                     {item.title}
                   </Typography>
                   <Typography variant="body2">{item.body}</Typography>
@@ -84,7 +91,9 @@ const Skill = () => {
 
           {/* lists */}
           <TitleBox component="div">
-            <Typography variant="h5">My Top Skills</Typography>
+            <Typography variant="h5" sx={{ fontWeight: "500" }}>
+              My Top Skills
+            </Typography>
           </TitleBox>
           <Grid container>
             {front.map((item) => (
@@ -112,7 +121,12 @@ const Skill = () => {
                     }}
                   />
                   <CardContent>
-                    <Typography variant="body1" component="div" gutterBottom>
+                    <Typography
+                      variant="body2"
+                      component="div"
+                      gutterBottom
+                      sx={{ fontWeight: "500" }}
+                    >
                       {item.title}
                     </Typography>
                   </CardContent>

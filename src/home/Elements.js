@@ -25,7 +25,7 @@ export const StyledSpan = styled("span")(({ theme }) => ({
 }));
 export const StyledButton = styled(Button)(({ theme }) => ({
   marginBottom: theme.spacing(0),
-  wordSpacing: theme.spacing(1),
+  wordSpacing: theme.spacing(0.5),
   [theme.breakpoints.down("md")]: {
     width: "100%",
   },
