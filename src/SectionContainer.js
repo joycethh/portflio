@@ -23,12 +23,17 @@ const StyledTitleBox = styled(Box)(({ theme }) => ({
   paddingBottom: theme.spacing(2),
   paddingTop: theme.spacing(10),
   textAlign: "center",
-  borderBottom: "3px solid #FF2E63",
+  // borderBottom: "3px solid #FF2E63",
   textTransform: "uppercase",
+  // backgroundColor: "pink",
+}));
 
-  // ":active": {
-  //   borderBottom: "1px solid red",
-  // },
+const HeaderBar = styled("div")(({ theme }) => ({
+  backgroundColor: "#444649",
+  height: "4px",
+  width: "70px",
+  display: "block",
+  margin: "auto",
 }));
 const SectionContainer = ({ title, children }) => {
   return (
@@ -38,6 +43,7 @@ const SectionContainer = ({ title, children }) => {
           <StyledTitleBox>
             <Typography variant="h4">{title}</Typography>
           </StyledTitleBox>
+          <HeaderBar />
         </div>
         <div>{children}</div>
       </Container>
