@@ -13,7 +13,10 @@ function App() {
       <CssBaseline />
       <BrowserRouter>
         <Navbar />
-        <Toolbar id="back-to-top-anchor" />
+        <Toolbar
+          id="back-to-top-anchor"
+          sx={{ backgroundColor: "primary.main" }}
+        />
         <Routes>
           <Route exact path="/" element={<MainPage />} />
         </Routes>

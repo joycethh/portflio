@@ -29,7 +29,6 @@ const StyledListItem = styled(ListItem)(({ theme }) => ({
 
 const StyledListItemWeb = styled(ListItem)(({ theme }) => ({
   color: "#F5F5F5",
-  paddingRight: theme.spacing(5),
   fontSize: "13px",
   textTransform: "uppercase",
   "&:active": {
@@ -50,12 +49,16 @@ const Navbar = () => {
     duration: 500,
   };
 
+  const WeblistItemProps = {
+    component: LinkS,
+    spy: true,
+    smooth: true,
+    offset: -100,
+    duration: 500,
+  };
   return (
     <div>
-      <AppBar
-        position="sticky"
-        sx={{ borderBottom: 3, borderColor: "#00ADB5" }}
-      >
+      <AppBar elevation={0} sx={{ borderBottom: 3, borderColor: "#00ADB5" }}>
         <Toolbar>
           <LinkS
             activeClass="active"
@@ -118,7 +121,7 @@ const Navbar = () => {
               {navItems.map((item) => (
                 <StyledListItemWeb
                   key={item}
-                  {...listItemProps}
+                  {...WeblistItemProps}
                   to={item.toLowerCase()}
                 >
                   {item}

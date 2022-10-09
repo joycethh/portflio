@@ -13,6 +13,9 @@ const lightTheme = createTheme({
       default: "#EAEAEA",
     },
   },
+  typography: {
+    fontFamily: ["Raleway", "sans-serif"].join(","),
+  },
   components: {
     MuiAppBar: {
       styleOverrides: {
