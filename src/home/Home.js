@@ -24,7 +24,9 @@ const Home = () => {
                 <Typography variant="body1">Hello, my name is</Typography>
               </BioBox>
               <BioBox mt={1}>
-                <Typography variant="h3">Joyce Tang</Typography>
+                <Typography variant="h3" sx={{ fontWeight: "600" }}>
+                  Joyce Tang
+                </Typography>
               </BioBox>
               <BioBox mt={2}>
                 <Typography variant="body1">

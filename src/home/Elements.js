@@ -9,7 +9,6 @@ export const AvatarBox = styled(Box)(({ theme }) => ({
 
 export const BioBox = styled(Box)(({ theme }) => ({
   color: "#fcfcfc",
-  letterSpacing: theme.spacing(2),
   paddingRight: theme.spacing(25),
   [theme.breakpoints.down("md")]: {
     display: "flex",
@@ -22,10 +21,11 @@ export const BioBox = styled(Box)(({ theme }) => ({
 export const StyledSpan = styled("span")(({ theme }) => ({
   padding: "0 2px",
   color: "#003e41",
-  fontWeight: 700,
+  fontWeight: 600,
 }));
 export const StyledButton = styled(Button)(({ theme }) => ({
   marginBottom: theme.spacing(0),
+  wordSpacing: theme.spacing(1),
   [theme.breakpoints.down("md")]: {
     width: "100%",
   },
