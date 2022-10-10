@@ -10,7 +10,7 @@ import {
 } from "@mui/material";
 
 import { SpeechBubble } from "./Elements";
-import SectionContainer from "../SectionContainer";
+import { SectionContainer } from "../SectionContainer";
 import Form from "./Form";
 import Socials from "../Socials";
 import Avatar from "../Avatar";

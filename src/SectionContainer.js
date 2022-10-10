@@ -17,7 +17,8 @@ const HeaderBar = styled("div")(({ theme }) => ({
   display: "block",
   margin: "auto",
 }));
-const SectionContainer = ({ title, children }) => {
+
+export const SectionContainer = ({ title, children }) => {
   return (
     <>
       {/* <Container> */}
@@ -35,4 +36,10 @@ const SectionContainer = ({ title, children }) => {
   );
 };
 
-export default SectionContainer;
+export const SubTitleBox = styled("div")(({ theme }) => ({
+  paddingTop: theme.spacing(9),
+  paddingBottom: theme.spacing(7),
+  display: "flex",
+  justifyContent: "center",
+  textAlign: "center",
+}));

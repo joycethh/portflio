@@ -1,7 +1,7 @@
 import React from "react";
 import { Box, Container, Tabs, Tab, Grid } from "@mui/material";
 
-import SectionContainer from "../SectionContainer";
+import { SectionContainer, SubTitleBox } from "../SectionContainer";
 import TabPanel from "./TabPanel";
 import MyCard from "./Card";
 import projectData from "./ProjectsData";
@@ -18,13 +18,8 @@ const Projects = () => {
       <Box sx={{ p: 6 }}>
         <Container>
           <SectionContainer title="projects">
-            <Box
-              sx={{
-                display: "flex",
-                justifyContent: "center",
-                paddingTop: 9,
-              }}
-            >
+            {/* title box */}
+            <SubTitleBox>
               <Tabs
                 variant="scrollable"
                 value={value}
@@ -36,7 +31,7 @@ const Projects = () => {
                 <Tab label="Node JS " />
                 <Tab label="JavaScript" />
               </Tabs>
-            </Box>
+            </SubTitleBox>
 
             <TabPanel value={value} index={0}>
               <Grid

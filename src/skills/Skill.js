@@ -7,20 +7,11 @@ import {
   CardContent,
   Grid,
   Typography,
-  styled,
   Paper,
   Fab,
 } from "@mui/material";
 import { ImportantDevices, Code, TipsAndUpdates } from "@mui/icons-material";
-import SectionContainer from "../SectionContainer";
-
-const TitleBox = styled("div")(({ theme }) => ({
-  paddingTop: theme.spacing(9),
-  paddingBottom: theme.spacing(7),
-  display: "flex",
-  justifyContent: "center",
-  textAlign: "center",
-}));
+import { SectionContainer, SubTitleBox } from "../SectionContainer";
 
 const Skill = () => {
   return (
@@ -29,11 +20,11 @@ const Skill = () => {
         <Container>
           <SectionContainer title="Skills">
             {/* overview   */}
-            <TitleBox component="div">
+            <SubTitleBox>
               <Typography variant="h5" sx={{ fontWeight: "500" }}>
                 Skills Overview
               </Typography>
-            </TitleBox>
+            </SubTitleBox>
             <Grid
               container
               spacing={{ xs: 5, md: 2 }}
@@ -92,11 +83,11 @@ const Skill = () => {
             </Grid>
 
             {/* lists */}
-            <TitleBox component="div">
+            <SubTitleBox>
               <Typography variant="h5" sx={{ fontWeight: "500" }}>
                 My Top Skills
               </Typography>
-            </TitleBox>
+            </SubTitleBox>
             <Grid
               container
               spacing={1}
