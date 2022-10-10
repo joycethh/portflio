@@ -7,14 +7,25 @@ export const AvatarBox = styled(Box)(({ theme }) => ({
   textAlign: "center",
 }));
 
+// export const BioBox = styled(Box)(({ theme }) => ({
+//   color: "#fcfcfc",
+//   paddingRight: theme.spacing(25),
+//   [theme.breakpoints.down("md")]: {
+//     display: "flex",
+//     justifyContent: "center",
+//     paddingLeft: theme.spacing(2),
+//     paddingRight: theme.spacing(2),
+//   },
+// }));
+
 export const BioBox = styled(Box)(({ theme }) => ({
   color: "#fcfcfc",
-  paddingRight: theme.spacing(25),
+  [theme.breakpoints.up("md")]: {
+    paddingRight: theme.spacing(25),
+  },
   [theme.breakpoints.down("md")]: {
     display: "flex",
     justifyContent: "center",
-    paddingLeft: theme.spacing(2),
-    paddingRight: theme.spacing(2),
   },
 }));
 

@@ -56,7 +56,11 @@ const MyCard = ({
 }) => {
   return (
     <>
-      <Card sx={{ position: "relative" }}>
+      <Card
+        sx={{
+          position: "relative",
+        }}
+      >
         <StyledImg component="img" image={image} alt={alt} />
 
         <Box

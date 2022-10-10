@@ -37,7 +37,7 @@ const TitleBox = styled("div")(({ theme }) => ({
 
 const Form = () => {
   return (
-    <Box pt={5}>
+    <Box pt={5} pl={1} pr={1}>
       <Paper sx={{ backgroundColor: "#faf9f9", borderRadius: "5px" }}>
         <TitleBox>
           <Typography variant="h5" sx={{ fontWeight: "500" }}>
