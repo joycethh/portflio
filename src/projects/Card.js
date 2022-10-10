@@ -59,9 +59,15 @@ const MyCard = ({
       <Card
         sx={{
           position: "relative",
+          width: { xs: 350, sm: "auto" },
         }}
       >
-        <StyledImg component="img" image={image} alt={alt} />
+        <StyledImg
+          component="img"
+          image={image}
+          alt={alt}
+          // sx={{ maxWidth: "100%" }}
+        />
 
         <Box
           sx={{

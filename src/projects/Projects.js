@@ -24,7 +24,12 @@ const Projects = () => {
                 paddingTop: 9,
               }}
             >
-              <Tabs variant="scrollable" value={value} onChange={handleChange}>
+              <Tabs
+                variant="scrollable"
+                value={value}
+                onChange={handleChange}
+                sx={{ backgroundColor: "#dddddd" }}
+              >
                 <Tab label="All" />
                 <Tab label="React.JS " />
                 <Tab label="Node JS " />
