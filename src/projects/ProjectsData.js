@@ -47,7 +47,7 @@ const projectData = [
   {
     title: "MaterialUi Product",
     label: ["React", "MUI5"],
-    description: "a static react website uses Material UI css library. ",
+    description: "A static react website uses Material UI css library. ",
     image: mui,
     siteLink: "https://mui-client-side-project.netlify.app/",
     codeLink: "https://github.com/joycethh/mui-practice",

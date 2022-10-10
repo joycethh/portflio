@@ -1,10 +1,11 @@
 import React from "react";
 import { Box, Container, Tabs, Tab, Grid } from "@mui/material";
 
-import SectionContainer from "../SectionContainer";
+import { SectionContainer, SubTitleBox } from "../SectionContainer";
 import TabPanel from "./TabPanel";
 import MyCard from "./Card";
 import projectData from "./ProjectsData";
+import GalleryGrid from "./GalleryGrid";
 
 const Projects = () => {
   const [value, setValue] = React.useState(0);
@@ -17,13 +18,8 @@ const Projects = () => {
       <Box sx={{ p: 6 }}>
         <Container>
           <SectionContainer title="projects">
-            <Box
-              sx={{
-                display: "flex",
-                justifyContent: "center",
-                paddingTop: 9,
-              }}
-            >
+            {/* title box */}
+            <SubTitleBox>
               <Tabs
                 variant="scrollable"
                 value={value}
@@ -35,7 +31,7 @@ const Projects = () => {
                 <Tab label="Node JS " />
                 <Tab label="JavaScript" />
               </Tabs>
-            </Box>
+            </SubTitleBox>
 
             <TabPanel value={value} index={0}>
               <Grid
@@ -63,105 +59,15 @@ const Projects = () => {
             </TabPanel>
 
             <TabPanel value={value} index={1}>
-              <Grid
-                container
-                spacing={2}
-                sx={{
-                  display: "flex",
-                  justifyContent: "center",
-                }}
-              >
-                {projectData
-                  .map((element) => {
-                    return {
-                      ...element,
-                      labels: element.label.filter(
-                        (label) => label === "React"
-                      ),
-                    };
-                  })
-                  .filter((elem) => elem.labels.length > 0)
-                  .map((item, i) => (
-                    <Grid item sm={12} md={6} key={i}>
-                      <MyCard
-                        image={item.image}
-                        alt={item.title}
-                        label={item.label}
-                        description={item.description}
-                        siteLink={item.siteLink}
-                        codeLink={item.codeLink}
-                      />
-                    </Grid>
-                  ))}
-              </Grid>
+              <GalleryGrid filter="React" />
             </TabPanel>
 
             <TabPanel value={value} index={2}>
-              <Grid
-                container
-                spacing={2}
-                sx={{
-                  display: "flex",
-                  justifyContent: "center",
-                }}
-              >
-                {projectData
-                  .map((element) => {
-                    return {
-                      ...element,
-                      labels: element.label.filter(
-                        (label) => label === "NodeJS"
-                      ),
-                    };
-                  })
-                  .filter((elem) => elem.labels.length > 0)
-                  .map((item, i) => (
-                    <Grid item sm={12} md={6} key={i}>
-                      <MyCard
-                        image={item.image}
-                        alt={item.title}
-                        label={item.label}
-                        description={item.description}
-                        siteLink={item.siteLink}
-                        codeLink={item.codeLink}
-                      />
-                    </Grid>
-                  ))}
-              </Grid>
+              <GalleryGrid filter="NodeJS" />
             </TabPanel>
 
             <TabPanel value={value} index={3}>
-              <Grid
-                container
-                spacing={2}
-                sx={{
-                  display: "flex",
-                  justifyContent: "center",
-                }}
-              >
-                {projectData
-                  .map((element) => {
-                    return {
-                      ...element,
-                      labels: element.label.filter(
-                        (label) => label === "JavaScript"
-                      ),
-                    };
-                  })
-                  .filter((elem) => elem.labels.length > 0)
-                  .map((item, i) => (
-                    <Grid item sm={12} md={6} key={i}>
-                      <MyCard
-                        image={item.image}
-                        alt={item.title}
-                        label={item.label}
-                        description={item.description}
-                        siteLink={item.siteLink}
-                        codeLink={item.codeLink}
-                      />
-                    </Grid>
-                  ))}
-              </Grid>
+              <GalleryGrid filter="JavaScript" />
             </TabPanel>
           </SectionContainer>
         </Container>

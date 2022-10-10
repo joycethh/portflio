@@ -72,13 +72,9 @@ const MyCard = ({
           width: { xs: 400, sm: "auto" },
         }}
       >
-        <StyledImg
-          component="img"
-          image={image}
-          alt={alt}
-          // sx={{ maxWidth: "100%" }}
-        />
+        <StyledImg component="img" image={image} alt={alt} />
 
+        {/* card footer */}
         <Box
           sx={{
             paddingTop: 2,
@@ -100,6 +96,7 @@ const MyCard = ({
           </Box>
         </Box>
 
+        {/* overlay box */}
         <OverlayBox component="div">
           <TextBox>
             <Typography variant="body1" pb={2}>
