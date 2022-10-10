@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Typography, styled, Box } from "@mui/material";
+import { Typography, styled, Box } from "@mui/material";
 
 const StyledTitleBox = styled(Box)(({ theme }) => ({
   width: "fit-content",
