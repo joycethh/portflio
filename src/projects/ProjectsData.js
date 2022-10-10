@@ -9,7 +9,7 @@ import simongame from "../images/simongame.png";
 
 const projectData = [
   {
-    title: "MERN App",
+    title: "Mern App",
     label: ["React", "Redux", "Mongoose ", "Autentication"],
     description:
       "A social media web app using CRUD princinples that allows users to create, update and delete posts. ",
@@ -27,7 +27,7 @@ const projectData = [
     codeLink: "https://github.com/joycethh/json-server-blog-project.git",
   },
   {
-    title: "MERN App",
+    title: "Mern App",
     label: ["React", "Mongoose", "Authentication"],
     description:
       "It is a MERN app using MongoDB cluster, Express, React, Node JS technologies. And a local authentication added.",
@@ -36,7 +36,7 @@ const projectData = [
     codeLink: "https://github.com/joycethh/workout-frontend.git",
   },
   {
-    title: "MERN App",
+    title: "Mern App",
     label: ["React", "NodeJS", "Mongoose"],
     description:
       "It is a light weight MERN web app that allow users to create and delete posts.",

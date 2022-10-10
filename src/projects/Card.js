@@ -29,7 +29,6 @@ const OverlayBox = styled("div")(({ theme }) => ({
 
 const StyledImg = styled(CardMedia)({
   display: "block",
-  maxWidth: "100%",
   opacity: 1,
   transition: ".5s ease",
   backfaceVisibility: "hidden",
@@ -43,6 +42,16 @@ const TextBox = styled("div")(({ theme }) => ({
   top: "50%",
   left: "50%",
   transform: "translate(-50%, -50%)",
+}));
+
+const StyledChip = styled(Chip)(({ theme }) => ({
+  margin: theme.spacing(0.5),
+  backgroundColor: "#68717e",
+  color: "#ffffff",
+  display: "inline-block",
+  fontSize: "11px",
+  height: "85%",
+  fontWeight: "700",
 }));
 
 const MyCard = ({
@@ -85,17 +94,7 @@ const MyCard = ({
             }}
           >
             {label.map((value) => (
-              <Chip
-                label={value}
-                key={value}
-                size="small"
-                sx={{
-                  mr: 1,
-                  backgroundColor: "#434e5e",
-                  color: "#f5f5f5",
-                  display: "inline-block",
-                }}
-              />
+              <StyledChip label={value} key={value} />
             ))}
           </Box>
         </Box>
@@ -107,7 +106,7 @@ const MyCard = ({
             </Typography>
             <Stack direction="row" spacing={2}>
               <Button
-                variant="outlined"
+                variant="contained"
                 size="small"
                 color="secondary"
                 href={siteLink}
