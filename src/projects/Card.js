@@ -68,7 +68,7 @@ const MyCard = ({
       <Card
         sx={{
           position: "relative",
-          width: { xs: 350, sm: "auto" },
+          width: { xs: 400, sm: "auto" },
         }}
       >
         <StyledImg

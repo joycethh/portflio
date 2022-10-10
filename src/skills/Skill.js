@@ -99,6 +99,7 @@ const Skill = () => {
             </TitleBox>
             <Grid
               container
+              spacing={1}
               sx={{
                 display: "flex",
                 justifyContent: "center",
@@ -107,7 +108,7 @@ const Skill = () => {
               {front.map((item) => (
                 <Grid
                   item
-                  xs={6}
+                  xs={4}
                   sm={3}
                   md={2}
                   key={item.title}

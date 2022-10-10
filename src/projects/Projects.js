@@ -28,7 +28,7 @@ const Projects = () => {
                 variant="scrollable"
                 value={value}
                 onChange={handleChange}
-                sx={{ backgroundColor: "#dddddd" }}
+                sx={{ backgroundColor: "#eeeeee" }}
               >
                 <Tab label="All" />
                 <Tab label="React.JS " />
