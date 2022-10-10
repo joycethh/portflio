@@ -20,17 +20,17 @@ const HeaderBar = styled("div")(({ theme }) => ({
 const SectionContainer = ({ title, children }) => {
   return (
     <>
-      <Container>
-        <div>
-          <StyledTitleBox>
-            <Typography variant="h4" sx={{ fontWeight: "700" }}>
-              {title}
-            </Typography>
-          </StyledTitleBox>
-          <HeaderBar />
-        </div>
-        <div>{children}</div>
-      </Container>
+      {/* <Container> */}
+      <div>
+        <StyledTitleBox>
+          <Typography variant="h4" sx={{ fontWeight: "700" }}>
+            {title}
+          </Typography>
+        </StyledTitleBox>
+        <HeaderBar />
+      </div>
+      <div>{children}</div>
+      {/* </Container> */}
     </>
   );
 };

@@ -2,6 +2,7 @@ import React from "react";
 import {
   Card,
   Box,
+  Container,
   CardMedia,
   CardContent,
   Grid,
@@ -25,116 +26,134 @@ const Skill = () => {
   return (
     <div id="skills">
       <Box sx={{ backgroundColor: "white", p: 6 }}>
-        <SectionContainer title="Skills">
-          {/* overview   */}
-          <TitleBox component="div">
-            <Typography variant="h5" sx={{ fontWeight: "500" }}>
-              Skills Overview
-            </Typography>
-          </TitleBox>
-          <Grid
-            container
-            spacing={{ xs: 5, md: 2 }}
-            sx={{
-              display: "flex",
-              justifyContent: "center",
-            }}
-          >
-            {lists.map((item) => (
-              <Grid
-                item
-                sm={12}
-                md={4}
-                key={item.title}
-                sx={{
-                  display: "flex",
-                  justifyContent: "center",
-                }}
-              >
-                <Paper
+        <Container>
+          <SectionContainer title="Skills">
+            {/* overview   */}
+            <TitleBox component="div">
+              <Typography variant="h5" sx={{ fontWeight: "500" }}>
+                Skills Overview
+              </Typography>
+            </TitleBox>
+            <Grid
+              container
+              spacing={{ xs: 5, md: 2 }}
+              sx={{
+                display: "flex",
+                justifyContent: "center",
+              }}
+            >
+              {lists.map((item) => (
+                <Grid
+                  item
+                  sm={12}
+                  md={4}
+                  key={item.title}
                   sx={{
-                    alignItem: "center",
-                    textAlign: "center",
-                    marginTop: "50px",
-                    padding: 3,
-                    width: { xs: 350, md: 300, lg: 350 },
-                    height: { xs: 240, md: 270, lg: 240 },
+                    display: "flex",
+                    justifyContent: "center",
                   }}
                 >
-                  <Fab
+                  <Paper
                     sx={{
-                      backgroundColor: "#00ADB5",
-                      width: "80px",
-                      height: "80px",
-                      top: "-60px",
+                      alignItem: "center",
+                      textAlign: "center",
+                      marginTop: "50px",
+                      padding: 3,
+                      width: { xs: 310, md: 300, lg: 350 },
+                      height: { xs: 240, md: 270, lg: 240 },
                     }}
                   >
-                    {
-                      <item.icon
-                        style={{ fontSize: "40px", color: "#FAF0E6" }}
-                      />
-                    }
-                  </Fab>
+                    <Fab
+                      sx={{
+                        backgroundColor: "#00ADB5",
+                        width: "80px",
+                        height: "80px",
+                        top: "-60px",
+                      }}
+                    >
+                      {
+                        <item.icon
+                          style={{ fontSize: "40px", color: "#FAF0E6" }}
+                        />
+                      }
+                    </Fab>
 
-                  <Typography
-                    gutterBottom
-                    variant="h6"
-                    sx={{ fontWeight: "500" }}
-                  >
-                    {item.title}
-                  </Typography>
-                  <Typography variant="body2">{item.body}</Typography>
-                </Paper>
-              </Grid>
-            ))}
-          </Grid>
-
-          {/* lists */}
-          <TitleBox component="div">
-            <Typography variant="h5" sx={{ fontWeight: "500" }}>
-              My Top Skills
-            </Typography>
-          </TitleBox>
-          <Grid container>
-            {front.map((item) => (
-              <Grid item xs={6} sm={3} md={2} key={item.title}>
-                <Card
-                  elevation={0}
-                  sx={{
-                    alignItem: "center",
-                    textAlign: "center",
-                    paddingTop: "20px",
-                    width: {
-                      sx: 50,
-                      sm: 80,
-                      md: 120,
-                    },
-                  }}
-                >
-                  <CardMedia
-                    component="img"
-                    image={item.src}
-                    alt={item.title}
-                    sx={{
-                      width: { xs: "35px", md: "60px", xl: "80px" },
-                      margin: "auto",
-                    }}
-                  />
-                  <CardContent>
                     <Typography
-                      variant="body2"
-                      component="div"
                       gutterBottom
+                      variant="h6"
                       sx={{ fontWeight: "500" }}
                     >
                       {item.title}
                     </Typography>
-                  </CardContent>
-                </Card>
-              </Grid>
-            ))}
-          </Grid>
-        </SectionContainer>
+                    <Typography variant="body2">{item.body}</Typography>
+                  </Paper>
+                </Grid>
+              ))}
+            </Grid>
+
+            {/* lists */}
+            <TitleBox component="div">
+              <Typography variant="h5" sx={{ fontWeight: "500" }}>
+                My Top Skills
+              </Typography>
+            </TitleBox>
+            <Grid
+              container
+              sx={{
+                display: "flex",
+                justifyContent: "center",
+              }}
+            >
+              {front.map((item) => (
+                <Grid
+                  item
+                  xs={6}
+                  sm={3}
+                  md={2}
+                  key={item.title}
+                  sx={{
+                    display: "flex",
+                    justifyContent: "center",
+                  }}
+                >
+                  <Card
+                    elevation={0}
+                    sx={{
+                      alignItem: "center",
+                      textAlign: "center",
+                      paddingTop: "20px",
+                      width: {
+                        sx: 50,
+                        sm: 80,
+                        md: 120,
+                      },
+                    }}
+                  >
+                    <CardMedia
+                      component="img"
+                      image={item.src}
+                      alt={item.title}
+                      sx={{
+                        width: { xs: "35px", md: "60px", xl: "80px" },
+                        margin: "auto",
+                      }}
+                    />
+                    <CardContent>
+                      <Typography
+                        variant="body2"
+                        component="div"
+                        gutterBottom
+                        sx={{ fontWeight: "700" }}
+                      >
+                        {item.title}
+                      </Typography>
+                    </CardContent>
+                  </Card>
+                </Grid>
+              ))}
+            </Grid>
+          </SectionContainer>
+        </Container>
       </Box>
     </div>
   );
