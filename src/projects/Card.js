@@ -67,6 +67,7 @@ const MyCard = ({
     <>
       <Card
         sx={{
+          backgroundColor: "#eeeeee",
           position: "relative",
           width: { xs: 400, sm: "auto" },
         }}
