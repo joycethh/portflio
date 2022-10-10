@@ -46,11 +46,11 @@ const Contact = () => {
 
   return (
     <div id="contact">
-      <Box sx={{ backgroundColor: "white", p: 6 }}>
+      <Box sx={{ backgroundColor: "white", pt: 6 }}>
         <SectionContainer title="Contact">
           <Box
             sx={{
-              width: "70%",
+              width: { sm: "100%", md: "85%", lg: "70%" },
               margin: "auto",
             }}
           >

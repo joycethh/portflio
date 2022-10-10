@@ -5,6 +5,9 @@ export const SpeechBubble = styled(Paper)(({ theme }) => ({
   background: "#faf9f9",
   borderRadius: "5px",
   paddingBottom: theme.spacing(5),
+  paddingLeft: theme.spacing(1),
+  paddingRight: theme.spacing(1),
+  margin: theme.spacing(1),
 
   "::after": {
     content: `""`,

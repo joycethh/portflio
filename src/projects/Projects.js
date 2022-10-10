@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Tabs, Tab, Grid } from "@mui/material";
+import { Box, Container, Tabs, Tab, Grid } from "@mui/material";
 
 import SectionContainer from "../SectionContainer";
 import TabPanel from "./TabPanel";
@@ -15,51 +15,33 @@ const Projects = () => {
   return (
     <div id="projects">
       <Box sx={{ p: 6 }}>
-        <SectionContainer title="projects">
-          <Box
-            sx={{
-              display: "flex",
-              justifyContent: "center",
-              paddingTop: 9,
-            }}
-          >
-            <Tabs variant="scrollable" value={value} onChange={handleChange}>
-              <Tab label="All" />
-              <Tab label="React.JS " />
-              <Tab label="Node JS " />
-              <Tab label="JavaScript" />
-            </Tabs>
-          </Box>
+        <Container>
+          <SectionContainer title="projects">
+            <Box
+              sx={{
+                display: "flex",
+                justifyContent: "center",
+                paddingTop: 9,
+              }}
+            >
+              <Tabs variant="scrollable" value={value} onChange={handleChange}>
+                <Tab label="All" />
+                <Tab label="React.JS " />
+                <Tab label="Node JS " />
+                <Tab label="JavaScript" />
+              </Tabs>
+            </Box>
 
-          <TabPanel value={value} index={0}>
-            <Grid container spacing={2}>
-              {projectData.map((item, i) => (
-                <Grid item sm={12} md={6} key={i}>
-                  <MyCard
-                    image={item.image}
-                    alt={item.title}
-                    label={item.label}
-                    description={item.description}
-                    siteLink={item.siteLink}
-                    codeLink={item.codeLink}
-                    title={item.title}
-                  />
-                </Grid>
-              ))}
-            </Grid>
-          </TabPanel>
-
-          <TabPanel value={value} index={1}>
-            <Grid container spacing={2}>
-              {projectData
-                .map((element) => {
-                  return {
-                    ...element,
-                    labels: element.label.filter((label) => label === "React"),
-                  };
-                })
-                .filter((elem) => elem.labels.length > 0)
-                .map((item, i) => (
+            <TabPanel value={value} index={0}>
+              <Grid
+                container
+                spacing={2}
+                sx={{
+                  display: "flex",
+                  justifyContent: "center",
+                }}
+              >
+                {projectData.map((item, i) => (
                   <Grid item sm={12} md={6} key={i}>
                     <MyCard
                       image={item.image}
@@ -68,64 +50,116 @@ const Projects = () => {
                       description={item.description}
                       siteLink={item.siteLink}
                       codeLink={item.codeLink}
+                      title={item.title}
                     />
                   </Grid>
                 ))}
-            </Grid>
-          </TabPanel>
+              </Grid>
+            </TabPanel>
 
-          <TabPanel value={value} index={2}>
-            <Grid container spacing={2}>
-              {projectData
-                .map((element) => {
-                  return {
-                    ...element,
-                    labels: element.label.filter((label) => label === "NodeJS"),
-                  };
-                })
-                .filter((elem) => elem.labels.length > 0)
-                .map((item, i) => (
-                  <Grid item sm={12} md={6} key={i}>
-                    <MyCard
-                      image={item.image}
-                      alt={item.title}
-                      label={item.label}
-                      description={item.description}
-                      siteLink={item.siteLink}
-                      codeLink={item.codeLink}
-                    />
-                  </Grid>
-                ))}
-            </Grid>
-          </TabPanel>
+            <TabPanel value={value} index={1}>
+              <Grid
+                container
+                spacing={2}
+                sx={{
+                  display: "flex",
+                  justifyContent: "center",
+                }}
+              >
+                {projectData
+                  .map((element) => {
+                    return {
+                      ...element,
+                      labels: element.label.filter(
+                        (label) => label === "React"
+                      ),
+                    };
+                  })
+                  .filter((elem) => elem.labels.length > 0)
+                  .map((item, i) => (
+                    <Grid item sm={12} md={6} key={i}>
+                      <MyCard
+                        image={item.image}
+                        alt={item.title}
+                        label={item.label}
+                        description={item.description}
+                        siteLink={item.siteLink}
+                        codeLink={item.codeLink}
+                      />
+                    </Grid>
+                  ))}
+              </Grid>
+            </TabPanel>
 
-          <TabPanel value={value} index={3}>
-            <Grid container spacing={2}>
-              {projectData
-                .map((element) => {
-                  return {
-                    ...element,
-                    labels: element.label.filter(
-                      (label) => label === "JavaScript"
-                    ),
-                  };
-                })
-                .filter((elem) => elem.labels.length > 0)
-                .map((item, i) => (
-                  <Grid item sm={12} md={6} key={i}>
-                    <MyCard
-                      image={item.image}
-                      alt={item.title}
-                      label={item.label}
-                      description={item.description}
-                      siteLink={item.siteLink}
-                      codeLink={item.codeLink}
-                    />
-                  </Grid>
-                ))}
-            </Grid>
-          </TabPanel>
-        </SectionContainer>
+            <TabPanel value={value} index={2}>
+              <Grid
+                container
+                spacing={2}
+                sx={{
+                  display: "flex",
+                  justifyContent: "center",
+                }}
+              >
+                {projectData
+                  .map((element) => {
+                    return {
+                      ...element,
+                      labels: element.label.filter(
+                        (label) => label === "NodeJS"
+                      ),
+                    };
+                  })
+                  .filter((elem) => elem.labels.length > 0)
+                  .map((item, i) => (
+                    <Grid item sm={12} md={6} key={i}>
+                      <MyCard
+                        image={item.image}
+                        alt={item.title}
+                        label={item.label}
+                        description={item.description}
+                        siteLink={item.siteLink}
+                        codeLink={item.codeLink}
+                      />
+                    </Grid>
+                  ))}
+              </Grid>
+            </TabPanel>
+
+            <TabPanel value={value} index={3}>
+              <Grid
+                container
+                spacing={2}
+                sx={{
+                  display: "flex",
+                  justifyContent: "center",
+                }}
+              >
+                {projectData
+                  .map((element) => {
+                    return {
+                      ...element,
+                      labels: element.label.filter(
+                        (label) => label === "JavaScript"
+                      ),
+                    };
+                  })
+                  .filter((elem) => elem.labels.length > 0)
+                  .map((item, i) => (
+                    <Grid item sm={12} md={6} key={i}>
+                      <MyCard
+                        image={item.image}
+                        alt={item.title}
+                        label={item.label}
+                        description={item.description}
+                        siteLink={item.siteLink}
+                        codeLink={item.codeLink}
+                      />
+                    </Grid>
+                  ))}
+              </Grid>
+            </TabPanel>
+          </SectionContainer>
+        </Container>
       </Box>
     </div>
   );
