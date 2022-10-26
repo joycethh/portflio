@@ -1,4 +1,4 @@
-import memory from "../images/memory.png";
+import funget from "../images/funget.png";
 import workout from "../images/workout.png";
 import blog from "../images/blog.png";
 import note from "../images/note.png";
@@ -10,12 +10,12 @@ import simongame from "../images/simongame.png";
 const projectData = [
   {
     title: "Mern App",
-    label: ["React", "Redux", "Mongoose ", "Autentication"],
+    label: ["React", "Redux", "Mongoose "],
     description:
-      "A social media web app using CRUD princinples that allows users to create, update and delete posts. ",
-    image: memory,
-    siteLink: "https://share-memory-monent.netlify.app",
-    codeLink: "https://github.com/joycethh/memory-server.git",
+      "This app features supporting multiple images upload. Following CRUD princinples, the app allows user to create and delete posts. More functions are on the way. ",
+    image: funget,
+    siteLink: "https://funget-social.netlify.app/",
+    codeLink: "https://github.com/joycethh/mui-practice",
   },
   {
     title: "Json Server Product",
@@ -60,6 +60,15 @@ const projectData = [
     siteLink: "https://joycethh.github.io/project-simon-game/",
     codeLink: "https://github.com/joycethh/project-simon-game",
   },
+  //  {
+  //     title: "Memory",
+  //     label: ["React", "Redux", "Mongoose "],
+  //     description:
+  //       "A social media web app using CRUD princinples that allows users to create, update and delete posts.  ",
+  //     image: funget,
+  //     siteLink: "https://share-memory-monent.netlify.app",
+  //     codeLink: "https://github.com/joycethh/memory-server.git",
+  //   },
   // {
   //   title: "Drum Kit",
   //   label: ["HTML ", "CSS ", "JavaScript"],
