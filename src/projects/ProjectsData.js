@@ -1,11 +1,9 @@
-import funget from "../images/funget.png";
-import workout from "../images/workout.png";
-import blog from "../images/blog.png";
-import note from "../images/note.png";
-import mui from "../images/mui.png";
-import simongame from "../images/simongame.png";
-// import drum from "../images/drum.jpg";
-// import tindog from "../images/tindog.png";
+import funget from "../images/p1-funget.png";
+import workout from "../images/p4-workout.png";
+import blog from "../images/p3-blog1.png";
+import note from "../images/p5-note.png";
+import portfolio from "../images/p2-personal.png";
+import simongame from "../images/p6-simon.png";
 
 const projectData = [
   {
@@ -45,12 +43,12 @@ const projectData = [
     codeLink: "https://github.com/joycethh/note-server.git",
   },
   {
-    title: "MaterialUi Product",
+    title: "Personal Website",
     label: ["React", "MUI5"],
-    description: "A static react website uses Material UI css library. ",
-    image: mui,
-    siteLink: "https://mui-client-side-project.netlify.app/",
-    codeLink: "https://github.com/joycethh/mui-practice",
+    description: "A portfolio website uses Material UI css library. ",
+    image: portfolio,
+    siteLink: "https://joycetang.me/",
+    codeLink: "https://github.com/joycethh/portflio",
   },
   {
     title: "JS/Css Product",
