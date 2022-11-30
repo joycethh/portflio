@@ -3,7 +3,7 @@ import workout from "../images/p4-workout.png";
 import blog from "../images/p3-blog1.png";
 import note from "../images/p5-note.png";
 import portfolio from "../images/p2-personal.png";
-import simongame from "../images/simongame.png";
+import simongame from "../images/p6-simon.png";
 
 const projectData = [
   {
