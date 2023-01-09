@@ -119,7 +119,7 @@ const MyCard = ({
                 href={codeLink}
                 target="_blank"
               >
-                View Codes
+                View Code
               </Button>
             </Stack>
           </TextBox>
