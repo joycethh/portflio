@@ -203,6 +203,10 @@ const front = [
     src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original-wordmark.svg",
   },
   {
+    title: "mySQL",
+    src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original-wordmark.svg",
+  },
+  {
     title: "GitHub",
     src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original-wordmark.svg",
   },
@@ -217,6 +221,10 @@ const front = [
   {
     title: "Heroku",
     src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/heroku/heroku-original-wordmark.svg",
+  },
+  {
+    title: "Firebase",
+    src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain-wordmark.svg",
   },
 ];
 
