@@ -2,10 +2,20 @@ import funget from "../images/p1-funget.png";
 import workout from "../images/p4-workout.png";
 import blog from "../images/p3-blog1.png";
 import note from "../images/p5-note.png";
+import gritgrace from "../images/p7-grit-grace.png";
 import portfolio from "../images/p2-personal.png";
 import simongame from "../images/p6-simon.png";
 
 const projectData = [
+  {
+    title: "E-commerce app",
+    label: ["React", "Firebase", "Redux Toolkit"],
+    description:
+      "This app features products listing, firebase user authentication, redux store management.",
+    image: gritgrace,
+    siteLink: "https://grit-grace.netlify.app/",
+    codeLink: "https://github.com/joycethh/playground",
+  },
   {
     title: "Mern App",
     label: ["React", "Redux", "Mongoose "],

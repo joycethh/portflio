@@ -12,6 +12,20 @@ import {
 } from "@mui/material";
 import { ImportantDevices, Code, TipsAndUpdates } from "@mui/icons-material";
 import { SectionContainer, SubTitleBox } from "../SectionContainer";
+import styled from "@emotion/styled";
+
+const CustomFab = styled(Fab)`
+  && {
+    background-color: #00adb5;
+    width: 80px;
+    height: 80px;
+    top: -60px;
+    cursor: auto;
+    &:hover {
+      background-color: #00adb5;
+    }
+  }
+`;
 
 const Skill = () => {
   return (
@@ -54,20 +68,20 @@ const Skill = () => {
                       height: { xs: 240, md: 270, lg: 240 },
                     }}
                   >
-                    <Fab
-                      sx={{
-                        backgroundColor: "#00ADB5",
-                        width: "80px",
-                        height: "80px",
-                        top: "-60px",
-                      }}
+                    <CustomFab
+                    // sx={{
+                    //   backgroundColor: "#00ADB5",
+                    //   width: "80px",
+                    //   height: "80px",
+                    //   top: "-60px",
+                    // }}
                     >
                       {
                         <item.icon
                           style={{ fontSize: "40px", color: "#FAF0E6" }}
                         />
                       }
-                    </Fab>
+                    </CustomFab>
 
                     <Typography
                       gutterBottom
@@ -176,7 +190,11 @@ const front = [
   },
   {
     title: "Redux",
-    src: "https://cdn.jsdelivr.net/npm/simple-icons@3.13.0/icons/redux.svg",
+    src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg",
+  },
+  {
+    title: "html",
+    src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
   },
   {
     title: "JavaScript",
@@ -186,9 +204,13 @@ const front = [
     title: "CSS",
     src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original-wordmark.svg",
   },
+  // {
+  //   title: "Bootstrap",
+  //   src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-plain-wordmark.svg",
+  // },
   {
-    title: "Bootstrap",
-    src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-plain-wordmark.svg",
+    title: "Firebase",
+    src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain-wordmark.svg",
   },
   {
     title: "Node JS",
@@ -201,6 +223,10 @@ const front = [
   {
     title: "MongoDB",
     src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original-wordmark.svg",
+  },
+  {
+    title: "mySQL",
+    src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original-wordmark.svg",
   },
   {
     title: "GitHub",
